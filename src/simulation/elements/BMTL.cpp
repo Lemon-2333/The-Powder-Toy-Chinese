@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BMTL()
 {
 	Identifier = "DEFAULT_PT_BMTL";
-	Name = "BMTL";
+	Name = ByteString("脆金").FromUtf8();
+	EName = "BMTL";
 	Colour = PIXPACK(0x505070);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -29,7 +30,7 @@ void Element::Element_BMTL()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Breakable metal. Common conductive building material, can melt and break under pressure.";
+	Description = ByteString("易碎金属.普通导电建筑材料,在压力下会熔化和破裂.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 

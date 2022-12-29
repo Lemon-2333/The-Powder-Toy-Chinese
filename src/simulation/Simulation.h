@@ -105,6 +105,7 @@ public:
 	unsigned int pmap_count[YRES][XRES];
 	//Simulation Settings
 	int edgeMode;
+	int chMode;
 	int gravityMode;
 	float customGravityX;
 	float customGravityY;
@@ -173,6 +174,7 @@ public:
 	void clear_area(int area_x, int area_y, int area_w, int area_h);
 
 	void SetEdgeMode(int newEdgeMode);
+	void SetChMode(int newChMode);
 	void SetDecoSpace(int newDecoSpace);
 
 	//Drawing Deco

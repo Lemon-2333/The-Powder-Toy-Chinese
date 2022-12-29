@@ -6,7 +6,8 @@ int Element_COAL_graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_BCOL()
 {
 	Identifier = "DEFAULT_PT_BCOL";
-	Name = "BCOL";
+	Name = ByteString("煤粉").FromUtf8();
+	EName = "BCOL";
 	Colour = PIXPACK(0x333333);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -31,7 +32,7 @@ void Element::Element_BCOL()
 	Weight = 90;
 
 	HeatConduct = 150;
-	Description = "Broken Coal. Heavy particles, burns slowly.";
+	Description = ByteString("煤粉.重粉末,燃烧缓慢.").FromUtf8();
 
 	Properties = TYPE_PART;
 

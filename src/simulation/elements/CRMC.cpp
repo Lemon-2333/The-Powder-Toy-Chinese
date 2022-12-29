@@ -7,7 +7,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_CRMC()
 {
 	Identifier = "DEFAULT_PT_CRMC";
-	Name = "CRMC";
+	Name = ByteString("陶瓷").FromUtf8();
+	EName = "CRMC";
 	Colour = PIXPACK(0xD6D1D4);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -31,7 +32,7 @@ void Element::Element_CRMC()
 	Weight = 100;
 
 	HeatConduct = 35;
-	Description = "Ceramic. Gets stronger under pressure.";
+	Description = ByteString("陶瓷.在压力下变得更强大.").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NEUTPASS;
 

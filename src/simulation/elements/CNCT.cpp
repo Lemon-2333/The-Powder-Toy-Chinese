@@ -3,7 +3,8 @@
 void Element::Element_CNCT()
 {
 	Identifier = "DEFAULT_PT_CNCT";
-	Name = "CNCT";
+	Name = ByteString("凝土").FromUtf8();
+	EName = "CNCT";
 	Colour = PIXPACK(0xC0C0C0);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -27,7 +28,7 @@ void Element::Element_CNCT()
 	Weight = 55;
 
 	HeatConduct = 100;
-	Description = "Concrete, stronger than stone.";
+	Description = ByteString("混凝土,比石头更坚固.").FromUtf8();
 
 	Properties = TYPE_PART|PROP_HOT_GLOW;
 

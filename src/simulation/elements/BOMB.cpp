@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_BOMB()
 {
 	Identifier = "DEFAULT_PT_BOMB";
-	Name = "BOMB";
+	Name = ByteString("炸弹").FromUtf8();
+	EName = "BOMB";
 	Colour = PIXPACK(0xFFF288);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -31,7 +32,7 @@ void Element::Element_BOMB()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Bomb. Explodes and destroys all surrounding particles when it touches something.";
+	Description = ByteString("炸弹.当它接触到某物时爆炸并摧毁所有周围的粒子.").FromUtf8();
 
 	Properties = TYPE_PART|PROP_SPARKSETTLE;
 

@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_CONV()
 {
 	Identifier = "DEFAULT_PT_CONV";
-	Name = "CONV";
+	Name = ByteString("转换").FromUtf8();
+	EName = "CONV";
 	Colour = PIXPACK(0x0AAB0A);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -29,7 +30,7 @@ void Element::Element_CONV()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Converter. Converts everything into whatever it first touches.";
+	Description = ByteString("转换器.将一切转化为它首先接触到的任何东西.").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NOCTYPEDRAW;
 

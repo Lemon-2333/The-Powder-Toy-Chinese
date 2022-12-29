@@ -6,7 +6,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_CFLM()
 {
 	Identifier = "DEFAULT_PT_HFLM";
-	Name = "CFLM";
+	Name = ByteString("冷焰").FromUtf8();
+	EName = "CFLM";
 	Colour = PIXPACK(0x8080FF);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -31,7 +32,7 @@ void Element::Element_CFLM()
 
 	DefaultProperties.temp = 0.0f;
 	HeatConduct = 88;
-	Description = "Sub-zero flame.";
+	Description = ByteString("绝对零度的火焰.").FromUtf8();
 
 	Properties = TYPE_GAS|PROP_LIFE_DEC|PROP_LIFE_KILL;
 

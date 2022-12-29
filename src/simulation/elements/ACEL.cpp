@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_ACEL()
 {
 	Identifier = "DEFAULT_PT_ACEL";
-	Name = "ACEL";
+	Name = ByteString("加速").FromUtf8();
+	EName = "ACEL";
 	Colour = PIXPACK(0x0099CC);
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -30,7 +31,7 @@ void Element::Element_ACEL()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Accelerator, speeds up nearby elements.";
+	Description = ByteString("加速器,加速附近的元素.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

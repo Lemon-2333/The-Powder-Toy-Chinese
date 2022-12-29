@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_ACID()
 {
 	Identifier = "DEFAULT_PT_ACID";
-	Name = "ACID";
+	Name = ByteString("酸").FromUtf8();
+	EName = "ACID";
 	Colour = PIXPACK(0xED55FF);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -31,7 +32,7 @@ void Element::Element_ACID()
 	Weight = 10;
 
 	HeatConduct = 34;
-	Description = "Dissolves almost everything.";
+	Description = ByteString("溶解几乎所有的东西.").FromUtf8();
 
 	Properties = TYPE_LIQUID|PROP_DEADLY;
 

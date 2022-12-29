@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_DEST()
 {
 	Identifier = "DEFAULT_PT_DEST";
-	Name = "DEST";
+	Name = ByteString("高爆").FromUtf8();
+	EName = "DEST";
 	Colour = PIXPACK(0xFF3311);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -30,7 +31,7 @@ void Element::Element_DEST()
 	Weight = 101;
 
 	HeatConduct = 150;
-	Description = "More destructive Bomb, can break through virtually anything.";
+	Description = ByteString("更具破坏性的炸弹,几乎可以突破任何东西.").FromUtf8();
 
 	Properties = TYPE_PART|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 

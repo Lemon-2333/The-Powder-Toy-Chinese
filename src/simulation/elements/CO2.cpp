@@ -6,6 +6,7 @@ void Element::Element_CO2()
 {
 	Identifier = "DEFAULT_PT_CO2";
 	Name = "CO2";
+	EName = "CO2";
 	Colour = PIXPACK(0x666666);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -29,7 +30,7 @@ void Element::Element_CO2()
 	Weight = 1;
 
 	HeatConduct = 88;
-	Description = "Carbon Dioxide. Heavy gas, drifts downwards. Carbonates water and turns to dry ice when cold.";
+	Description = ByteString("二氧化碳.沉重的气体,向下漂移.与水变成苏打水,并在寒冷时变成干冰.").FromUtf8();
 
 	Properties = TYPE_GAS;
 

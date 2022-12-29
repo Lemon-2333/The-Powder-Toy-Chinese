@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_ANAR()
 {
 	Identifier = "DEFAULT_PT_ANAR";
-	Name = "ANAR";
+	Name = ByteString("反尘").FromUtf8();
+	EName = "ANAR";
 	Colour = PIXPACK(0xFFFFEE);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -30,7 +31,7 @@ void Element::Element_ANAR()
 	Weight = 85;
 
 	HeatConduct = 70;
-	Description = "Anti-air. Very light dust, which behaves opposite gravity.";
+	Description = ByteString("反重力尘埃.非常轻的尘埃,其行为与重力相反.").FromUtf8();
 
 	Properties = TYPE_PART;
 

@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BTRY()
 {
 	Identifier = "DEFAULT_PT_BTRY";
-	Name = "BTRY";
+	Name = ByteString("电池").FromUtf8();
+	EName = "BTRY";
 	Colour = PIXPACK(0x858505);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -29,7 +30,7 @@ void Element::Element_BTRY()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Battery. Generates infinite electricity.";
+	Description = ByteString("电池.产生无限电力.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

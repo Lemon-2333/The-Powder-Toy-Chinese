@@ -3,7 +3,8 @@
 void Element::Element_BHOL()
 {
 	Identifier = "DEFAULT_PT_BHOL";
-	Name = "VACU";
+	Name = ByteString("真空").FromUtf8();
+	EName = "VACU";
 	Colour = PIXPACK(0x303030);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -28,7 +29,7 @@ void Element::Element_BHOL()
 
 	DefaultProperties.temp = R_TEMP + 70.0f + 273.15f;
 	HeatConduct = 255;
-	Description = "Vacuum, sucks in other particles and heats up.";
+	Description = ByteString("真空,吸入其他颗粒并加热.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

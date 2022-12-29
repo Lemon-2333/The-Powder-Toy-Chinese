@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BRMT()
 {
 	Identifier = "DEFAULT_PT_BRMT";
-	Name = "BRMT";
+	Name = ByteString("碎金").FromUtf8();
+	EName = "BRMT";
 	Colour = PIXPACK(0x705060);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -29,7 +30,7 @@ void Element::Element_BRMT()
 	Weight = 90;
 
 	HeatConduct = 211;
-	Description = "Broken metal. Created when iron rusts or when metals break from pressure.";
+	Description = ByteString("破碎的金属.当铁生锈或金属因压力而破裂时产生.").FromUtf8();
 
 	Properties = TYPE_PART|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 

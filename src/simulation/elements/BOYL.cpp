@@ -6,6 +6,7 @@ void Element::Element_BOYL()
 {
 	Identifier = "DEFAULT_PT_BOYL";
 	Name = "BOYL";
+	EName = "BOYL";
 	Colour = PIXPACK(0x0A3200);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -30,7 +31,7 @@ void Element::Element_BOYL()
 
 	DefaultProperties.temp = R_TEMP + 2.0f + 273.15f;
 	HeatConduct = 42;
-	Description = "Boyle, variable pressure gas. Expands when heated.";
+	Description = ByteString("波义耳,变压气体.受热膨胀.").FromUtf8();
 
 	Properties = TYPE_GAS;
 

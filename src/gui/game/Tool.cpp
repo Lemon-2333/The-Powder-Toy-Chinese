@@ -33,7 +33,7 @@ void Tool::SetTextureGen(VideoBuffer * (*textureGen)(int, int, int))
 	this->textureGen = textureGen;
 }
 ByteString Tool::GetIdentifier() { return identifier; }
-String Tool::GetName() { return toolName; }
+String Tool::GetName() { return toolName; } //return toolName;"123"
 String Tool::GetDescription() { return toolDescription; }
 Tool::~Tool() {}
 

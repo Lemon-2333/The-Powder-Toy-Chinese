@@ -67,6 +67,11 @@ void OptionsController::SetEdgeMode(int edgeMode)
 	model->SetEdgeMode(edgeMode);
 }
 
+void OptionsController::SetChMode(int chMode)
+{
+	model->SetChMode(chMode);
+}
+
 void OptionsController::SetTemperatureScale(int temperatureScale)
 {
 	model->SetTemperatureScale(temperatureScale);

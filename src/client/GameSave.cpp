@@ -514,6 +514,7 @@ void GameSave::readOPS(const std::vector<char> &data)
 		CheckBsonFieldInt(iter, "airMode", &airMode);
 		CheckBsonFieldFloat(iter, "ambientAirTemp", &ambientAirTemp);
 		CheckBsonFieldInt(iter, "edgeMode", &edgeMode);
+		CheckBsonFieldInt(iter, "chMode", &chMode);
 		CheckBsonFieldInt(iter, "pmapbits", &pmapbits);
 		if (!strcmp(bson_iterator_key(&iter), "signs"))
 		{
@@ -2433,6 +2434,7 @@ std::pair<bool, std::vector<char>> GameSave::serialiseOPS() const
 		RESTRICTVERSION(96, 0);
 	}
 	bson_append_int(&b, "edgeMode", edgeMode);
+	bson_append_int(&b, "chMode", chMode);
 
 	if (stkm.hasData())
 	{

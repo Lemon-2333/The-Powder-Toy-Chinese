@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_CAUS()
 {
 	Identifier = "DEFAULT_PT_CAUS";
-	Name = "CAUS";
+	Name = ByteString("腐气").FromUtf8();
+	EName = "CAUS";
 	Colour = PIXPACK(0x80FFA0);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -29,7 +30,7 @@ void Element::Element_CAUS()
 	Weight = 1;
 
 	HeatConduct = 70;
-	Description = "Caustic Gas, acts like ACID.";
+	Description = ByteString("腐蚀性气体,作用类似于酸.").FromUtf8();
 
 	Properties = TYPE_GAS|PROP_DEADLY;
 

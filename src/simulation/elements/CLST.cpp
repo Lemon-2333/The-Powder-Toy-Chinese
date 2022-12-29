@@ -7,7 +7,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_CLST()
 {
 	Identifier = "DEFAULT_PT_CLST";
-	Name = "CLST";
+	Name = ByteString("粘砂").FromUtf8();
+	EName = "CLST";
 	Colour = PIXPACK(0xE4A4A4);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -31,7 +32,7 @@ void Element::Element_CLST()
 	Weight = 55;
 
 	HeatConduct = 70;
-	Description = "Clay dust. Produces paste when mixed with water.";
+	Description = ByteString("粘土砂.与水混合时会产生糊状物.").FromUtf8();
 
 	Properties = TYPE_PART;
 

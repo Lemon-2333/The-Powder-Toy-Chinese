@@ -6,7 +6,8 @@ int Element_BIZR_graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_BIZR()
 {
 	Identifier = "DEFAULT_PT_BIZR";
-	Name = "BIZR";
+	Name = ByteString("奇液").FromUtf8();
+	EName = "BIZR";
 	Colour = PIXPACK(0x00FF77);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -30,7 +31,7 @@ void Element::Element_BIZR()
 	Weight = 30;
 
 	HeatConduct = 29;
-	Description = "Bizarre... contradicts the normal state changes. Paints other elements with its deco color.";
+	Description = ByteString("奇异液体...与正常状态变化相矛盾.用它的装饰颜色绘制其他元素.").FromUtf8();
 
 	Properties = TYPE_LIQUID;
 

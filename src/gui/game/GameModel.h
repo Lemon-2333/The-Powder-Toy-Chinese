@@ -91,6 +91,7 @@ private:
 	int edgeMode;
 	float ambientAirTemp;
 	int decoSpace;
+	int chMode;
 
 	String infoTip;
 	String toolTip;
@@ -124,6 +125,10 @@ public:
 
 	void SetEdgeMode(int edgeMode);
 	int GetEdgeMode();
+
+	void SetChMode(int chMode);
+	int GetChMode();
+
 	void SetTemperatureScale(int temperatureScale);
 	inline int GetTemperatureScale() const
 	{

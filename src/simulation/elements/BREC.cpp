@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BREC()
 {
 	Identifier = "DEFAULT_PT_BREC";
-	Name = "BREL";
+	Name = ByteString("损电").FromUtf8();
+	EName = "BREL";
 	Colour = PIXPACK(0x707060);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -29,7 +30,7 @@ void Element::Element_BREC()
 	Weight = 90;
 
 	HeatConduct = 211;
-	Description = "Broken electronics. Formed from EMP blasts, and when constantly sparked while under pressure, turns to EXOT.";
+	Description = ByteString("损坏的电子产品.由 EMP 爆炸形成,当在压力下不断产生火花时,就会变成 EXOT.").FromUtf8();
 
 	Properties = TYPE_PART|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 

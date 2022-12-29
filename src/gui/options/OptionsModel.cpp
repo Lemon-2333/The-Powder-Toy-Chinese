@@ -90,6 +90,17 @@ void OptionsModel::SetEdgeMode(int edgeMode)
 	notifySettingsChanged();
 }
 
+int OptionsModel::GetChMode()
+{
+	return gModel->GetSimulation()->chMode;
+}
+void OptionsModel::SetChMode(int chMode)
+{
+	Client::Ref().SetPref("Simulation.ChMode", chMode);
+	gModel->SetChMode(chMode);
+	notifySettingsChanged();
+}
+
 int OptionsModel::GetTemperatureScale()
 {
 	return gModel->GetTemperatureScale();

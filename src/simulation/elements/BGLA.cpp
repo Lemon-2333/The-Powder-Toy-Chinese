@@ -3,7 +3,8 @@
 void Element::Element_BGLA()
 {
 	Identifier = "DEFAULT_PT_BGLA";
-	Name = "BGLA";
+	Name = ByteString("碎璃").FromUtf8();
+	EName = "BGLA";
 	Colour = PIXPACK(0x606060);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -27,7 +28,7 @@ void Element::Element_BGLA()
 	Weight = 90;
 
 	HeatConduct = 150;
-	Description = "Broken Glass, heavy particles formed when glass breaks under pressure. Meltable. Bagels.";
+	Description = ByteString("碎玻璃,玻璃在压力下破裂时形成的重颗粒.可熔化.贝果.").FromUtf8(); //"Broken Glass, heavy particles formed when glass breaks under pressure. Meltable. Bagels."
 
 	Properties = TYPE_PART | PROP_NEUTPASS | PROP_HOT_GLOW;
 

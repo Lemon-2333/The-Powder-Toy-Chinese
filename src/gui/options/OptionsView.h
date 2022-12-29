@@ -27,6 +27,7 @@ class OptionsView: public ui::Window
 	ui::Button * ambientAirTempPreview;
 	ui::DropDown * gravityMode;
 	ui::DropDown * edgeMode;
+	ui::DropDown * chMode;
 	ui::DropDown * temperatureScale;
 	ui::DropDown * scale;
 	ui::Checkbox * resizable;

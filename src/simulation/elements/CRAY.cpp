@@ -7,7 +7,8 @@ static unsigned int wavelengthToDecoColour(int wavelength);
 void Element::Element_CRAY()
 {
 	Identifier = "DEFAULT_PT_CRAY";
-	Name = "CRAY";
+	Name = ByteString("物线").FromUtf8();
+	EName = "CRAY";
 	Colour = PIXPACK(0xBBFF00);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -31,7 +32,7 @@ void Element::Element_CRAY()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Particle Ray Emitter. Creates a beam of particles set by its ctype, with a range set by tmp.";
+	Description = ByteString("物质射线发射器.创建由其 ctype 设置的粒子束,范围由 tmp 设置.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

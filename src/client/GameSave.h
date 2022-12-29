@@ -117,6 +117,7 @@ public:
 	int airMode = 0;
 	float ambientAirTemp = R_TEMP + 273.15f;
 	int edgeMode = 0;
+	int chMode = 0;
 
 	//Signs
 	std::vector<sign> signs;

@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_ARAY()
 {
 	Identifier = "DEFAULT_PT_ARAY";
-	Name = "ARAY";
+	Name = ByteString("射线").FromUtf8();
+	EName = "ARAY";
 	Colour = PIXPACK(0xFFBB00);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -29,7 +30,7 @@ void Element::Element_ARAY()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Ray Emitter. Rays create points when they collide.";
+	Description = ByteString("射线发射器.光线在碰撞时会产生点.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

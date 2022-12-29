@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_CLNE()
 {
 	Identifier = "DEFAULT_PT_CLNE";
-	Name = "CLNE";
+	Name = ByteString("克隆").FromUtf8();
+	EName = "CLNE";
 	Colour = PIXPACK(0xFFD010);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -29,7 +30,7 @@ void Element::Element_CLNE()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Clone. Duplicates any particles it touches.";
+	Description = ByteString("克隆.复制它接触的任何粒子.").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NOCTYPEDRAW;
 

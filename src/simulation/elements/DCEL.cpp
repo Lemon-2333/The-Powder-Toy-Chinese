@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_DCEL()
 {
 	Identifier = "DEFAULT_PT_DCEL";
-	Name = "DCEL";
+	Name = ByteString("减速").FromUtf8();
+	EName = "DCEL";
 	Colour = PIXPACK(0x99CC00);
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -30,7 +31,7 @@ void Element::Element_DCEL()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Decelerator, slows down nearby elements.";
+	Description = ByteString("减速器,减慢附近的元素.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

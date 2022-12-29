@@ -539,6 +539,7 @@ void Simulation::SaveSimOptions(GameSave * gameSave)
 	gameSave->airMode = air->airMode;
 	gameSave->ambientAirTemp = air->ambientAirTemp;
 	gameSave->edgeMode = edgeMode;
+	gameSave->chMode = chMode;
 	gameSave->legacyEnable = legacy_enable;
 	gameSave->waterEEnabled = water_equal_test;
 	gameSave->gravityEnable = grav->IsEnabled();
@@ -1014,6 +1015,21 @@ void Simulation::SetEdgeMode(int newEdgeMode)
 		break;
 	default:
 		SetEdgeMode(0);
+	}
+}
+
+void Simulation::SetChMode(int newChMode) //疑似chmod
+{
+	chMode = newChMode;
+	switch(chMode)
+	{
+	case 0:
+	case 1:
+		
+		//SetChMode(1);
+		break;
+	default:
+		SetChMode(0);
 	}
 }
 
@@ -2309,6 +2325,7 @@ void Simulation::clear_sim(void)
 		air->ClearAirH();
 	}
 	SetEdgeMode(edgeMode);
+	SetChMode(chMode);
 }
 
 bool Simulation::IsWallBlocking(int x, int y, int type)
@@ -5220,6 +5237,7 @@ Simulation::Simulation():
 	CGOL(0),
 	GSPEED(1),
 	edgeMode(0),
+	chMode(0),
 	gravityMode(0),
 	customGravityX(0),
 	customGravityY(0),

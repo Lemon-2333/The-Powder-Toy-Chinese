@@ -32,6 +32,8 @@ public:
 	void SetAmbientAirTemperature(float ambientAirTemp);
 	int GetEdgeMode();
 	void SetEdgeMode(int edgeMode);
+	int GetChMode();
+	void SetChMode(int chMode);
 	int GetTemperatureScale();
 	void SetTemperatureScale(int temperatureScale);
 	int GetGravityMode();

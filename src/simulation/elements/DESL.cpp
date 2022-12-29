@@ -3,7 +3,8 @@
 void Element::Element_DESL()
 {
 	Identifier = "DEFAULT_PT_DESL";
-	Name = "DESL";
+	Name = ByteString("柴油").FromUtf8();
+	EName = "DESL";
 	Colour = PIXPACK(0x440000);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -27,7 +28,7 @@ void Element::Element_DESL()
 	Weight = 15;
 
 	HeatConduct = 42;
-	Description = "Liquid diesel. Explodes under high pressure and temperatures.";
+	Description = ByteString("液体柴油.在高压和高温下爆炸.").FromUtf8();
 
 	Properties = TYPE_LIQUID;
 
