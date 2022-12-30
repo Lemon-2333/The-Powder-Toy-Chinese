@@ -6,7 +6,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FWRK()
 {
 	Identifier = "DEFAULT_PT_FWRK";
-	Name = "FWRK";
+	Name = ByteString("原花").FromUtf8();
+	EName = "FWRK";
 	Colour = PIXPACK(0x666666);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -30,7 +31,7 @@ void Element::Element_FWRK()
 	Weight = 97;
 
 	HeatConduct = 100;
-	Description = "Original version of fireworks, activated by heat/neutrons.";
+	Description = ByteString("烟花的原始版本,由热/中子激活.").FromUtf8();
 
 	Properties = TYPE_PART|PROP_LIFE_DEC;
 

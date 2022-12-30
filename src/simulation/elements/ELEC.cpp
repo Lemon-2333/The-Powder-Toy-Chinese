@@ -7,7 +7,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_ELEC()
 {
 	Identifier = "DEFAULT_PT_ELEC";
-	Name = "ELEC";
+	Name = ByteString("电子").FromUtf8();
+	EName = "ELEC";
 	Colour = PIXPACK(0xDFEFFF);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -32,7 +33,7 @@ void Element::Element_ELEC()
 
 	DefaultProperties.temp = R_TEMP + 200.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Electrons. Sparks electronics, reacts with NEUT and WATR.";
+	Description = ByteString("电子.给碰到的物质传递一个电脉冲,与 中子-NEUT 和 水-WATR 发生反应.").FromUtf8();
 
 	Properties = TYPE_ENERGY|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 

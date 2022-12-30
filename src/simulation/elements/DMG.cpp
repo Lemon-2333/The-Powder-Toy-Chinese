@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_DMG()
 {
 	Identifier = "DEFAULT_PT_DMG";
-	Name = "DMG";
+	Name = ByteString("压弹").FromUtf8();
+	EName = "DMG";
 	Colour = PIXPACK(0x88FF88);
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -31,7 +32,7 @@ void Element::Element_DMG()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Generates damaging pressure and breaks any elements it hits.";
+	Description = ByteString("对碰到它的物质表面产生一个破坏性的压力(除了钻石 DMND").FromUtf8();
 
 	Properties = TYPE_PART|PROP_SPARKSETTLE;
 

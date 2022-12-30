@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FRZW()
 {
 	Identifier = "DEFAULT_PT_FRZW";
-	Name = "FRZW";
+	Name = ByteString("冻水").FromUtf8();
+	EName = "FRZW";
 	Colour = PIXPACK(0x1020C0);
 	MenuVisible = 1;
 	MenuSection = SC_CRACKER2;
@@ -30,7 +31,7 @@ void Element::Element_FRZW()
 
 	DefaultProperties.temp = 120.0f;
 	HeatConduct = 29;
-	Description = "Freeze water. Hybrid liquid formed when Freeze powder melts.";
+	Description = ByteString("冻结水.冷冻粉末熔化时形成的混合液体.").FromUtf8();
 
 	Properties = TYPE_LIQUID | PROP_LIFE_DEC;
 

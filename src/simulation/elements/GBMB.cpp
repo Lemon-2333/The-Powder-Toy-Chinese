@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_GBMB()
 {
 	Identifier = "DEFAULT_PT_GBMB";
-	Name = "GBMB";
+	Name = ByteString("重弹").FromUtf8();
+	EName = "GBMB";
 	Colour = PIXPACK(0x1144BB);
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -31,7 +32,7 @@ void Element::Element_GBMB()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Gravity bomb. Sticks to the first object it touches then produces a strong gravity push.";
+	Description = ByteString("重力炸弹.粘在它接触的第一个物体上,然后产生强大的重力推动.").FromUtf8();
 
 	Properties = TYPE_PART|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 

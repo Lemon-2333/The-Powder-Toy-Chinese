@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_DSTW()
 {
 	Identifier = "DEFAULT_PT_DSTW";
-	Name = "DSTW";
+	Name = ByteString("纯水").FromUtf8();
+	EName = "DSTW";
 	Colour = PIXPACK(0x1020C0);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -30,7 +31,7 @@ void Element::Element_DSTW()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 23;
-	Description = "Distilled water, does not conduct electricity.";
+	Description = ByteString("纯水,不导电.").FromUtf8();
 
 	Properties = TYPE_LIQUID|PROP_NEUTPASS;
 

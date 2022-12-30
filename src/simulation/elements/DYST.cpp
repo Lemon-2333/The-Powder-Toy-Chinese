@@ -3,7 +3,8 @@
 void Element::Element_DYST()
 {
 	Identifier = "DEFAULT_PT_DYST";
-	Name = "DYST";
+	Name = ByteString("菌尸").FromUtf8();
+	EName = "DYST";
 	Colour = PIXPACK(0xBBB0A0);
 	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
@@ -27,7 +28,7 @@ void Element::Element_DYST()
 	Weight = 80;
 
 	HeatConduct = 70;
-	Description = "Dead Yeast.";
+	Description = ByteString("死去的酵母.").FromUtf8();
 
 	Properties = TYPE_PART;
 

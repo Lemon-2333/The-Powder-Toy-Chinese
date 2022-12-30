@@ -7,7 +7,8 @@ static void changeType(ELEMENT_CHANGETYPE_FUNC_ARGS);
 void Element::Element_ETRD()
 {
 	Identifier = "DEFAULT_PT_ETRD";
-	Name = "ETRD";
+	Name = ByteString("电极").FromUtf8();
+	EName = "ETRD";
 	Colour = PIXPACK(0x404040);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -31,7 +32,7 @@ void Element::Element_ETRD()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Electrode. Creates a surface that allows Plasma arcs. (Use sparingly)";
+	Description = ByteString("一旦通电,会在相邻两个电极之间产生等离子体-PLSM").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 

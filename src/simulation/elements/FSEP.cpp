@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FSEP()
 {
 	Identifier = "DEFAULT_PT_FSEP";
-	Name = "FSEP";
+	Name = ByteString("导粉").FromUtf8();
+	EName = "FSEP";
 	Colour = PIXPACK(0x63AD5F);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -29,7 +30,7 @@ void Element::Element_FSEP()
 	Weight = 70;
 
 	HeatConduct = 70;
-	Description = "Fuse Powder. Burns slowly like FUSE.";
+	Description = ByteString("导火线粉末.像导火线(FUSE)一样缓慢燃烧.").FromUtf8();
 
 	Properties = TYPE_PART;
 

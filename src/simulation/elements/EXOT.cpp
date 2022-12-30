@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_EXOT()
 {
 	Identifier = "DEFAULT_PT_EXOT";
-	Name = "EXOT";
+	Name = ByteString("奇异物质").FromUtf8();
+	EName = "EXOT";
 	Colour = PIXPACK(0x247BFE);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -31,7 +32,7 @@ void Element::Element_EXOT()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 250;
-	Description = "Exotic matter. Explodes with excess exposure to electrons. Has many other odd reactions.";
+	Description = ByteString("奇异物质.当被大量电子轰击时会爆炸.还有许多其他奇怪的反应.").FromUtf8();
 
 	Properties = TYPE_LIQUID|PROP_NEUTPASS;
 

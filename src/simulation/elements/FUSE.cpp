@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FUSE()
 {
 	Identifier = "DEFAULT_PT_FUSE";
-	Name = "FUSE";
+	Name = ByteString("导线").FromUtf8();
+	EName = "FUSE";
 	Colour = PIXPACK(0x0A5706);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -29,7 +30,7 @@ void Element::Element_FUSE()
 	Weight = 100;
 
 	HeatConduct = 200;
-	Description = "Burns slowly. Ignites at somewhat high temperatures or with electricity.";
+	Description = ByteString("导火线,慢慢燃烧.在稍高的温度下或用电点燃.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

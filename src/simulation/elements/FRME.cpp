@@ -5,7 +5,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_FRME()
 {
 	Identifier = "DEFAULT_PT_FRME";
-	Name = "FRME";
+	Name = ByteString("支架").FromUtf8();
+	EName = "FRME";
 	Colour = PIXPACK(0x999988);
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -29,7 +30,7 @@ void Element::Element_FRME()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Frame, can be used with pistons to push many particles.";
+	Description = ByteString("支架,可与活塞一起使用以推动许多粒子.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

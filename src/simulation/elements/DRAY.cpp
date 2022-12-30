@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_DRAY()
 {
 	Identifier = "DEFAULT_PT_DRAY";
-	Name = "DRAY";
+	Name = ByteString("D线").FromUtf8();
+	EName = "DRAY";
 	Colour = PIXPACK(0xFFAA22);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -29,7 +30,7 @@ void Element::Element_DRAY()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Duplicator ray. Replicates a line of particles in front of it.";
+	Description = ByteString("复制射线.复制在它前面的一行粒子.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

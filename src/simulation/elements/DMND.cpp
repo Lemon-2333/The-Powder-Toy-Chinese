@@ -3,7 +3,8 @@
 void Element::Element_DMND()
 {
 	Identifier = "DEFAULT_PT_DMND";
-	Name = "DMND";
+	Name = ByteString("钻石").FromUtf8();
+	EName = "DMND";
 	Colour = PIXPACK(0xCCFFFF);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -27,7 +28,7 @@ void Element::Element_DMND()
 	Weight = 100;
 
 	HeatConduct = 186;
-	Description = "Diamond. Indestructible.";
+	Description = ByteString("钻石.坚不可摧.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

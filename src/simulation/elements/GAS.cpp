@@ -3,7 +3,8 @@
 void Element::Element_GAS()
 {
 	Identifier = "DEFAULT_PT_GAS";
-	Name = "GAS";
+	Name = ByteString("油气").FromUtf8();
+	EName = "GAS";
 	Colour = PIXPACK(0xE0FF20);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -28,7 +29,7 @@ void Element::Element_GAS()
 
 	DefaultProperties.temp = R_TEMP + 2.0f + 273.15f;
 	HeatConduct = 42;
-	Description = "Diffuses quickly and is flammable. Liquefies into OIL under pressure.";
+	Description = ByteString("石油气,扩散迅速且易燃.在压力下液化成石油(OIL).").FromUtf8();
 
 	Properties = TYPE_GAS | PROP_NEUTPASS;
 

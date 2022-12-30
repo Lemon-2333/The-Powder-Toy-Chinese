@@ -5,6 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FOG()
 {
 	Identifier = "DEFAULT_PT_FOG";
+	Name = ByteString("雾").FromUtf8();
 	Name = "FOG";
 	Colour = PIXPACK(0xAAAAAA);
 	MenuVisible = 1;
@@ -30,7 +31,7 @@ void Element::Element_FOG()
 
 	DefaultProperties.temp = 243.15f;
 	HeatConduct = 100;
-	Description = "Fog, created when an electric current is passed through RIME.";
+	Description = ByteString("电流通过霜(RIME)时产生的雾.").FromUtf8();
 
 	Properties = TYPE_GAS|PROP_LIFE_DEC;
 

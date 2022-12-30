@@ -14,7 +14,8 @@ int Element_STKM_run_stickman(playerst *playerp, UPDATE_FUNC_ARGS);
 void Element::Element_FIGH()
 {
 	Identifier = "DEFAULT_PT_FIGH";
-	Name = "FIGH";
+	Name = ByteString("打手").FromUtf8();
+	EName = "FIGH";
 	Colour = PIXPACK(0xFFE0A0);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -40,7 +41,7 @@ void Element::Element_FIGH()
 
 	DefaultProperties.temp = R_TEMP + 14.6f + 273.15f;
 	HeatConduct = 0;
-	Description = "Fighter. Tries to kill stickmen. You must first give it an element to kill him with.";
+	Description = ByteString("打手.会尝试杀死火柴人.你必须先给它一个元素来作为武器.").FromUtf8();
 
 	Properties = PROP_NOCTYPEDRAW;
 

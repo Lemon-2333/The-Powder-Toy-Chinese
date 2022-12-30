@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_FIRW()
 {
 	Identifier = "DEFAULT_PT_FIRW";
-	Name = "FIRW";
+	Name = ByteString("烟花").FromUtf8();
+	EName = "FIRW";
 	Colour = PIXPACK(0xFFA040);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -30,7 +31,7 @@ void Element::Element_FIRW()
 	Weight = 55;
 
 	HeatConduct = 70;
-	Description = "Fireworks! Colorful, set off by fire.";
+	Description = ByteString("烟花!五彩缤纷,火光映衬.").FromUtf8();
 
 	Properties = TYPE_PART|PROP_LIFE_DEC;
 

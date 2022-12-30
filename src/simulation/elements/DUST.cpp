@@ -3,7 +3,8 @@
 void Element::Element_DUST()
 {
 	Identifier = "DEFAULT_PT_DUST";
-	Name = "DUST";
+	Name = ByteString("尘埃").FromUtf8();
+	EName = "DUST";
 	Colour = PIXPACK(0xFFE0A0);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -28,7 +29,7 @@ void Element::Element_DUST()
 	Weight = 85;
 
 	HeatConduct = 70;
-	Description = "Very light dust. Flammable.";
+	Description = ByteString("很轻的灰尘.易燃.").FromUtf8();
 
 	Properties = TYPE_PART;
 

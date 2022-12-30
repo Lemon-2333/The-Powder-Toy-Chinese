@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FRZZ()
 {
 	Identifier = "DEFAULT_PT_FRZZ";
-	Name = "FRZZ";
+	Name = ByteString("寒尘").FromUtf8();
+	EName = "FRZZ";
 	Colour = PIXPACK(0xC0E0FF);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -30,7 +31,7 @@ void Element::Element_FRZZ()
 
 	DefaultProperties.temp = 253.15f;
 	HeatConduct = 46;
-	Description = "Freeze powder. When melted, forms ice that always cools. Spreads with regular water.";
+	Description = ByteString("轻粉末,很冷,能立即冻住水.能将水(WATR)转变成寒水(FRZW).").FromUtf8();
 
 	Properties = TYPE_PART;
 

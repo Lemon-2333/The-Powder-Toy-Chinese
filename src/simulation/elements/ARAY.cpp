@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_ARAY()
 {
 	Identifier = "DEFAULT_PT_ARAY";
-	Name = ByteString("射线").FromUtf8();
+	Name = ByteString("A线").FromUtf8();
 	EName = "ARAY";
 	Colour = PIXPACK(0xFFBB00);
 	MenuVisible = 1;

@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FRAY()
 {
 	Identifier = "DEFAULT_PT_FRAY";
-	Name = "FRAY";
+	Name = ByteString("F线").FromUtf8();
+	EName = "FRAY";
 	Colour = PIXPACK(0x00BBFF);
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -30,7 +31,7 @@ void Element::Element_FRAY()
 
 	DefaultProperties.temp = 20.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Force Emitter. Pushes or pulls objects based on its temperature. Use like ARAY.";
+	Description = ByteString("力射线发射器.根据温度推动或拉动物体.像射线发射器(ARAY)一样使用.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_EMP()
 {
 	Identifier = "DEFAULT_PT_EMP";
-	Name = "EMP";
+	Name = ByteString("电弹").FromUtf8();
+	EName = "EMP";
 	Colour = PIXPACK(0x66AAFF);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -30,7 +31,7 @@ void Element::Element_EMP()
 	Weight = 100;
 
 	HeatConduct = 121;
-	Description = "Electromagnetic pulse. Breaks activated electronics.";
+	Description = ByteString("电磁脉冲.破坏激活的电子设备.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 

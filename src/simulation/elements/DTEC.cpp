@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_DTEC()
 {
 	Identifier = "DEFAULT_PT_DTEC";
-	Name = "DTEC";
+	Name = ByteString("探测").FromUtf8();
+	EName = "DTEC";
 	Colour = PIXPACK(0xFD9D18);
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -29,7 +30,7 @@ void Element::Element_DTEC()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Detector, creates a spark when something with its ctype is nearby.";
+	Description = ByteString("探测器,当附近有其 ctype 的东西时会产生火花.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

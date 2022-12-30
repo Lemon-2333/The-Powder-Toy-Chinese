@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_DLAY()
 {
 	Identifier = "DEFAULT_PT_DLAY";
-	Name = "DLAY";
+	Name = ByteString("延时").FromUtf8();
+	EName = "DLAY";
 	Colour = PIXPACK(0x753590);
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -31,7 +32,7 @@ void Element::Element_DLAY()
 
 	DefaultProperties.temp = 4.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Conducts with temperature-dependent delay. (use HEAT/COOL).";
+	Description = ByteString("延时器,进行与温度相关的延迟. (使用加热工具(HEAT)/冷却工具(COOL)).").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

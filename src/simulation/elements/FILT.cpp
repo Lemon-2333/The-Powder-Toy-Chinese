@@ -8,7 +8,8 @@ int Element_FILT_getWavelengths(Particle* cpart);
 void Element::Element_FILT()
 {
 	Identifier = "DEFAULT_PT_FILT";
-	Name = "FILT";
+	Name = ByteString("滤镜").FromUtf8();
+	EName = "FILT";
 	Colour = PIXPACK(0x000056);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -32,7 +33,7 @@ void Element::Element_FILT()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Filter for photons, changes the color.";
+	Description = ByteString("滤镜,可以改变光子(PHOT)的颜色,颜色随温度变化.").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NOAMBHEAT | PROP_LIFE_DEC;
 
