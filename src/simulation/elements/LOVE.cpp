@@ -3,7 +3,8 @@
 void Element::Element_LOVE()
 {
 	Identifier = "DEFAULT_PT_LOVE";
-	Name = "LOVE";
+	Name = ByteString("爱心").FromUtf8();
+	EName = "LOVE";
 	Colour = PIXPACK(0xFF30FF);
 	MenuVisible = 1;
 	MenuSection = SC_CRACKER2;
@@ -28,7 +29,7 @@ void Element::Element_LOVE()
 
 	DefaultProperties.temp = 373.0f;
 	HeatConduct = 40;
-	Description = "Love...";
+	Description = ByteString("爱...").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

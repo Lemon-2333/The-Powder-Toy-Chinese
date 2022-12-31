@@ -7,6 +7,7 @@ void Element::Element_LIFE()
 {
 	Identifier = "DEFAULT_PT_LIFE";
 	Name = "LIFE";
+	EName = "LIFE";
 	Colour = PIXPACK(0x0CAC00);
 	MenuVisible = 0;
 	MenuSection = SC_LIFE;
@@ -31,7 +32,7 @@ void Element::Element_LIFE()
 
 	DefaultProperties.temp = 9000.0f;
 	HeatConduct = 40;
-	Description = "Game Of Life! B3/S23";
+	Description = ByteString("生命游戏! B3/S23").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE;
 

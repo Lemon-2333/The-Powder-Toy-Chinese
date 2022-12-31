@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_LITH()
 {
 	Identifier = "DEFAULT_PT_LITH";
-	Name = "LITH";
+	Name = ByteString("锂").FromUtf8();
+	EName = "LITH";
 	Colour = PIXPACK(0xB6AABF);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -30,7 +31,7 @@ void Element::Element_LITH()
 	Weight = 17;
 
 	HeatConduct = 70;
-	Description = "Lithium. Reactive element that explodes on contact with water.";
+	Description = ByteString("锂.遇水爆炸的反应性元素.").FromUtf8();
 
 	Properties = TYPE_PART | PROP_LIFE_DEC;
 

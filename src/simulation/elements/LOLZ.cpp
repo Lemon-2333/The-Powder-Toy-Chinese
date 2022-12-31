@@ -3,7 +3,8 @@
 void Element::Element_LOLZ()
 {
 	Identifier = "DEFAULT_PT_LOLZ";
-	Name = "LOLZ";
+	Name = ByteString("哈哈").FromUtf8();
+	EName = "LOLZ";
 	Colour = PIXPACK(0x569212);
 	MenuVisible = 1;
 	MenuSection = SC_CRACKER2;
@@ -28,7 +29,7 @@ void Element::Element_LOLZ()
 
 	DefaultProperties.temp = 373.0f;
 	HeatConduct = 40;
-	Description = "Lolz";
+	Description = ByteString("哈哈").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

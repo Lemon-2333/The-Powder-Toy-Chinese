@@ -3,7 +3,8 @@
 void Element::Element_LRBD()
 {
 	Identifier = "DEFAULT_PT_LRBD";
-	Name = "LRBD";
+	Name = ByteString("液铷").FromUtf8();
+	EName = "LRBD";
 	Colour = PIXPACK(0xAAAAAA);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -28,7 +29,7 @@ void Element::Element_LRBD()
 
 	DefaultProperties.temp = R_TEMP + 45.0f + 273.15f;
 	HeatConduct = 170;
-	Description = "Liquid Rubidium.";
+	Description = ByteString("液态铷,压力越大,爆炸点越低,其他性质和固态铷一样").FromUtf8();
 
 	Properties = TYPE_LIQUID|PROP_CONDUCTS|PROP_LIFE_DEC;
 

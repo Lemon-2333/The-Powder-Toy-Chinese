@@ -8,7 +8,8 @@ static void create_line_par(Simulation * sim, int x1, int y1, int x2, int y2, in
 void Element::Element_LIGH()
 {
 	Identifier = "DEFAULT_PT_LIGH";
-	Name = "LIGH";
+	Name = ByteString("闪电").FromUtf8();
+	EName = "LIGH";
 	Colour = PIXPACK(0xFFFFC0);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -32,7 +33,7 @@ void Element::Element_LIGH()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Lightning. Change the brush size to set the size of the lightning.";
+	Description = ByteString("闪电.更改画笔大小以设置闪电的大小.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

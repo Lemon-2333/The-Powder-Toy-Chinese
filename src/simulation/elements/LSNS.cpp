@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_LSNS()
 {
 	Identifier = "DEFAULT_PT_LSNS";
-	Name = "LSNS";
+	Name = ByteString("生探").FromUtf8();
+	EName = "LSNS";
 	Colour = PIXPACK(0x336699);
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -30,7 +31,7 @@ void Element::Element_LSNS()
 
 	DefaultProperties.temp = 4.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Life sensor, creates a spark when there's a nearby particle with a life higher than its temperature.";
+	Description = ByteString("生命探测器,当其周围元素 Lite 值高于传感器温度时,产生电流.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

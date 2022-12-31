@@ -6,7 +6,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_LDTC()
 {
 	Identifier = "DEFAULT_PT_LDTC";
-	Name = "LDTC";
+	Name = ByteString("线探").FromUtf8();
+	EName = "LDTC";
 	Colour = PIXPACK(0x66ff66);
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -30,7 +31,7 @@ void Element::Element_LDTC()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Linear detector. Scans in 8 directions for particles with its ctype and creates a spark on the opposite side.";
+	Description = ByteString("线性探测器.在 8 个方向上扫描其 ctype 的粒子,并在另一侧产生火花.").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NOCTYPEDRAW;
 
