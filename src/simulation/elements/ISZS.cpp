@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_ISZS()
 {
 	Identifier = "DEFAULT_PT_ISZS";
-	Name = "ISZS";
+	Name = ByteString("Z固").FromUtf8();
+	EName = "ISZS";
 	Colour = PIXPACK(0x662089);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -30,7 +31,7 @@ void Element::Element_ISZS()
 
 	DefaultProperties.temp = 140.00f;
 	HeatConduct = 251;
-	Description = "Solid form of ISOZ, slowly decays into PHOT.";
+	Description = ByteString("同位素-Z(ISOZ)的固体形式,慢慢衰变为 PHOT.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

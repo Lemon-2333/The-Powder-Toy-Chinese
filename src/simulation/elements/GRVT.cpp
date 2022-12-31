@@ -8,6 +8,7 @@ void Element::Element_GRVT()
 {
 	Identifier = "DEFAULT_PT_GRVT";
 	Name = "GRVT";
+	EName = "GRVT";
 	Colour = PIXPACK(0x00EE76);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -31,7 +32,7 @@ void Element::Element_GRVT()
 	Weight = -1;
 
 	HeatConduct = 61;
-	Description = "Gravitons. Create Newtonian Gravity.";
+	Description = ByteString("引力子.在周围创建引力场.").FromUtf8();
 
 	Properties = TYPE_ENERGY|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 

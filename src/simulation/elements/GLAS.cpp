@@ -6,7 +6,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_GLAS()
 {
 	Identifier = "DEFAULT_PT_GLAS";
-	Name = "GLAS";
+	Name = ByteString("玻璃").FromUtf8();
+	EName = "GLAS";
 	Colour = PIXPACK(0x404040);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +31,7 @@ void Element::Element_GLAS()
 	Weight = 100;
 
 	HeatConduct = 150;
-	Description = "Glass. Meltable. Shatters under pressure, and refracts photons.";
+	Description = ByteString("玻璃.可熔化.在压力下破碎,并折射光子.").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NEUTPASS | PROP_HOT_GLOW | PROP_SPARKSETTLE;
 

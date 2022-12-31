@@ -3,7 +3,8 @@
 void Element::Element_INST()
 {
 	Identifier = "DEFAULT_PT_INST";
-	Name = "INST";
+	Name = ByteString("瞬导").FromUtf8();
+	EName = "INST";
 	Colour = PIXPACK(0x404039);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -27,7 +28,7 @@ void Element::Element_INST()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Instantly conducts, PSCN to charge, NSCN to take.";
+	Description = ByteString("瞬时导体,P型硅(PSCN)输入,N型硅(NSCN)输出.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 

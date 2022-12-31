@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_H2()
 {
 	Identifier = "DEFAULT_PT_H2";
-	Name = "HYGN";
+	Name = ByteString("氢气").FromUtf8();
+	EName = "HYGN";
 	Colour = PIXPACK(0x5070FF);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -29,7 +30,7 @@ void Element::Element_H2()
 	Weight = 1;
 
 	HeatConduct = 251;
-	Description = "Hydrogen. Combusts with OXYG to make WATR. Undergoes fusion at high temperature and pressure.";
+	Description = ByteString("氢气.与氧气(OXYG)燃烧生成水(WATR).在高温高压下进行融合.").FromUtf8();
 
 	Properties = TYPE_GAS;
 

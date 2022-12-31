@@ -7,7 +7,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_GRAV()
 {
 	Identifier = "DEFAULT_PT_GRAV";
-	Name = "GRAV";
+	Name = ByteString("引尘").FromUtf8();
+	EName = "GRAV";
 	Colour = PIXPACK(0x202020);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -31,7 +32,7 @@ void Element::Element_GRAV()
 	Weight = 85;
 
 	HeatConduct = 70;
-	Description = "Very light dust. Changes colour based on velocity.";
+	Description = ByteString("引力尘,很轻的灰尘.根据速度改变颜色.").FromUtf8();
 
 	Properties = TYPE_PART | PROP_LIFE_DEC;
 

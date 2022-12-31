@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_ICEI()
 {
 	Identifier = "DEFAULT_PT_ICEI";
-	Name = "ICE";
+	Name = ByteString("冰").FromUtf8();
+	EName = "ICE";
 	Colour = PIXPACK(0xA0C0FF);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +31,7 @@ void Element::Element_ICEI()
 
 	DefaultProperties.temp = R_TEMP - 50.0f + 273.15f;
 	HeatConduct = 46;
-	Description = "Crushes under pressure. Cools down air.";
+	Description = ByteString("冰,在压力下粉碎.冷却空气.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC|PROP_NEUTPASS;
 

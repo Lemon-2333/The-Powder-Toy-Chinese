@@ -3,7 +3,8 @@
 void Element::Element_INWR()
 {
 	Identifier = "DEFAULT_PT_INWR";
-	Name = "INWR";
+	Name = ByteString("绝线").FromUtf8();
+	EName = "INWR";
 	Colour = PIXPACK(0x544141);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -27,7 +28,7 @@ void Element::Element_INWR()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Insulated Wire. Doesn't conduct to metal or semiconductors.";
+	Description = ByteString("绝缘线.对金属或半导体不导电.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 

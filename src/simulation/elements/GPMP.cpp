@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_GPMP()
 {
 	Identifier = "DEFAULT_PT_GPMP";
-	Name = "GPMP";
+	Name = ByteString("引力泵").FromUtf8();
+	EName = "GPMP";
 	Colour = PIXPACK(0x0A3B3B);
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -30,7 +31,7 @@ void Element::Element_GPMP()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Gravity pump. Changes gravity to its temp when activated. (use HEAT/COOL)";
+	Description = ByteString("引力泵.激活时将重力更改为其温度. (使用加热-HEAT/冷却-COOL)").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

@@ -3,7 +3,8 @@
 void Element::Element_INSL()
 {
 	Identifier = "DEFAULT_PT_INSL";
-	Name = "INSL";
+	Name = ByteString("绝缘").FromUtf8();
+	EName = "INSL";
 	Colour = PIXPACK(0x9EA3B6);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -27,7 +28,7 @@ void Element::Element_INSL()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Insulator, does not conduct heat and blocks electricity.";
+	Description = ByteString("绝缘体,不导热,不导电.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

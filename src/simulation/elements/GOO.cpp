@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_GOO()
 {
 	Identifier = "DEFAULT_PT_GOO";
-	Name = "GOO";
+	Name = ByteString("粘土").FromUtf8();
+	EName = "GOO";
 	Colour = PIXPACK(0x804000);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +31,7 @@ void Element::Element_GOO()
 	Weight = 100;
 
 	HeatConduct = 75;
-	Description = "Deforms and disappears under pressure.";
+	Description = ByteString("粘土,在压力下变形并消失.").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 

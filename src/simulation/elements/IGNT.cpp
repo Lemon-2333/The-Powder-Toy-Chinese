@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_IGNT()
 {
 	Identifier = "DEFAULT_PT_IGNT";
-	Name = "IGNC";
+	Name = ByteString("导线").FromUtf8();
+	EName = "IGNC";
 	Colour = PIXPACK(0xC0B050);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -29,7 +30,7 @@ void Element::Element_IGNT()
 	Weight = 100;
 
 	HeatConduct = 88;
-	Description = "Ignition cord. Burns slowly with fire and sparks.";
+	Description = ByteString("导火线.用火和火花缓慢燃烧.").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE | PROP_SPARKSETTLE | PROP_LIFE_KILL;
 

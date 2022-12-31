@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_ISOZ()
 {
 	Identifier = "DEFAULT_PT_ISOZ";
-	Name = "ISOZ";
+	Name = ByteString("同Z").FromUtf8();
+	EName = "ISOZ";
 	Colour = PIXPACK(0xAA30D0);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -30,7 +31,7 @@ void Element::Element_ISOZ()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Isotope-Z. Radioactive liquid, decays into photons when touching PHOT or under negative pressure.";
+	Description = ByteString("同位素-Z.放射性液体,可以被光子(PHOT)或负压激发,会释放出更多的光子.").FromUtf8();
 
 	Properties = TYPE_LIQUID|PROP_NEUTPENETRATE;
 

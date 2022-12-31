@@ -7,7 +7,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_LAVA()
 {
 	Identifier = "DEFAULT_PT_LAVA";
-	Name = "LAVA";
+	Name = ByteString("熔岩").FromUtf8(); 
+	EName = "LAVA"; 
 	Colour = PIXPACK(0xE05010);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -33,7 +34,7 @@ void Element::Element_LAVA()
 
 	DefaultProperties.temp = R_TEMP + 1500.0f + 273.15f;
 	HeatConduct = 60;
-	Description = "Molten lava. Ignites flammable materials. Generated when metals and other materials melt, solidifies when cold.";
+	Description = ByteString("熔岩.点燃易燃材料.金属等材料熔化时生成,遇冷凝固.").FromUtf8();
 
 	Properties = TYPE_LIQUID|PROP_LIFE_DEC;
 

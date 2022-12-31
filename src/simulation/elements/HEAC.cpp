@@ -6,7 +6,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_HEAC()
 {
 	Identifier = "DEFAULT_PT_HEAC";
-	Name = "HEAC";
+	Name = ByteString("导热").FromUtf8();
+	EName = "HEAC";
 	Colour = PIXPACK(0xCB6351);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +31,7 @@ void Element::Element_HEAC()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Rapid heat conductor.";
+	Description = ByteString("快速导热体.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

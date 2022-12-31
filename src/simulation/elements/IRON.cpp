@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_IRON()
 {
 	Identifier = "DEFAULT_PT_IRON";
-	Name = "IRON";
+	Name = ByteString("铁").FromUtf8();
+	EName = "IRON";
 	Colour = PIXPACK(0x707070);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -29,7 +30,7 @@ void Element::Element_IRON()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Rusts with salt, can be used for electrolysis of WATR.";
+	Description = ByteString("遇盐生锈,可用于电解水(WATR).").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 

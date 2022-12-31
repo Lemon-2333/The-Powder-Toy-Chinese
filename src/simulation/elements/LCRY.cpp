@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_LCRY()
 {
 	Identifier = "DEFAULT_PT_LCRY";
-	Name = "LCRY";
+	Name = ByteString("液晶").FromUtf8();
+	EName = "LCRY";
 	Colour = PIXPACK(0x505050);
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -30,7 +31,7 @@ void Element::Element_LCRY()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Liquid Crystal. Changes colour when charged. (PSCN Charges, NSCN Discharges)";
+	Description = ByteString("液晶.充电时会改变颜色.P形硅(PSCN)开启,N形硅(NSCN)关闭").FromUtf8();
 
 	Properties = TYPE_SOLID;
 
