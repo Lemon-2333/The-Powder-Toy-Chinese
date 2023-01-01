@@ -7,6 +7,7 @@ void Element::Element_WIFI()
 {
 	Identifier = "DEFAULT_PT_WIFI";
 	Name = "WIFI";
+	EName = "WIFI";
 	Colour = PIXPACK(0x40A060);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -30,7 +31,7 @@ void Element::Element_WIFI()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Wireless transmitter, transfers spark to any other wifi on the same temperature channel.";
+	Description = ByteString("无线电传输器,将电脉冲传到其他在相同温度频道的WIFI上.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

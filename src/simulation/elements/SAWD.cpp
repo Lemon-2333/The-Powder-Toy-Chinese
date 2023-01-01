@@ -3,7 +3,8 @@
 void Element::Element_SAWD()
 {
 	Identifier = "DEFAULT_PT_SAWD";
-	Name = "SAWD";
+	Name = ByteString("锯末").FromUtf8();
+	EName = "SAWD";
 	Colour = PIXPACK(0xF0F0A0);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -27,7 +28,7 @@ void Element::Element_SAWD()
 	Weight = 18;
 
 	HeatConduct = 70;
-	Description = "Sawdust. Floats on water.";
+	Description = ByteString("锯末,能浮在水上.").FromUtf8();
 
 	Properties = TYPE_PART | PROP_NEUTPASS;
 

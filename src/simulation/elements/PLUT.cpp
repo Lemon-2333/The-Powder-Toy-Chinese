@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_PLUT()
 {
 	Identifier = "DEFAULT_PT_PLUT";
-	Name = "PLUT";
+	Name = ByteString("钚").FromUtf8();
+	EName = "PLUT";
 	Colour = PIXPACK(0x407020);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -31,7 +32,7 @@ void Element::Element_PLUT()
 
 	DefaultProperties.temp = R_TEMP + 4.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Plutonium. Heavy, fissile particles. Generates neutrons under pressure.";
+	Description = ByteString("钚,重且易裂变的元素,压力下产生中子").FromUtf8();
 
 	Properties = TYPE_PART|PROP_NEUTPASS|PROP_RADIOACTIVE;
 

@@ -8,7 +8,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_PHOT()
 {
 	Identifier = "DEFAULT_PT_PHOT";
-	Name = "PHOT";
+	Name = ByteString("光子").FromUtf8();
+	EName = "PHOT";
 	Colour = PIXPACK(0xFFFFFF);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -33,7 +34,7 @@ void Element::Element_PHOT()
 
 	DefaultProperties.temp = R_TEMP + 900.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Photons. Refracts through glass, scattered by quartz, and color-changed by different elements. Ignites flammable materials.";
+	Description = ByteString("光子,在GLAS中发生折射,在QRTZ中散射,碰到某些物质会变色,点燃可燃物.").FromUtf8();
 
 	Properties = TYPE_ENERGY|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 

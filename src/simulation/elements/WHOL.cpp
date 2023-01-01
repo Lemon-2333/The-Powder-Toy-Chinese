@@ -3,7 +3,8 @@
 void Element::Element_WHOL()
 {
 	Identifier = "DEFAULT_PT_WHOL";
-	Name = "VENT";
+	Name = ByteString("排孔").FromUtf8();
+	EName = "VENT";
 	Colour = PIXPACK(0xEFEFEF);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -28,7 +29,7 @@ void Element::Element_WHOL()
 
 	DefaultProperties.temp = R_TEMP - 16.0f + 273.15f;
 	HeatConduct = 255;
-	Description = "Air vent, creates pressure and pushes other particles away.";
+	Description = ByteString("排气孔,产生压力并推开周围的粒子.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

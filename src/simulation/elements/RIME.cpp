@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_RIME()
 {
 	Identifier = "DEFAULT_PT_RIME";
-	Name = "RIME";
+	Name = ByteString("霜").FromUtf8();
+	EName = "RIME";
 	Colour = PIXPACK(0xCCCCCC);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +31,7 @@ void Element::Element_RIME()
 
 	DefaultProperties.temp = -30.0f + 273.15f;
 	HeatConduct = 100;
-	Description = "Solid, created when steam cools rapidly and goes through sublimation.";
+	Description = ByteString("水蒸气快速冷却凝华时产生,可以升华").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_YEST()
 {
 	Identifier = "DEFAULT_PT_YEST";
-	Name = "YEST";
+	Name = ByteString("酵母").FromUtf8();
+	EName = "YEST";
 	Colour = PIXPACK(0xEEE0C0);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -29,7 +30,7 @@ void Element::Element_YEST()
 	Weight = 80;
 
 	HeatConduct = 70;
-	Description = "Yeast, grows when warm (~37C).";
+	Description = ByteString("酵母,温度温暖(约37摄氏度)时生长").FromUtf8();
 
 	Properties = TYPE_PART;
 

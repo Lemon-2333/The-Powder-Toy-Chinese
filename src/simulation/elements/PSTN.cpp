@@ -11,7 +11,8 @@ static int MoveStack(Simulation * sim, int stackX, int stackY, int directionX, i
 void Element::Element_PSTN()
 {
 	Identifier = "DEFAULT_PT_PSTN";
-	Name = "PSTN";
+	Name = ByteString("活塞").FromUtf8();
+	EName = "PSTN";
 	Colour = PIXPACK(0xAA9999);
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -36,7 +37,7 @@ void Element::Element_PSTN()
 
 	DefaultProperties.temp = 10.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Piston, extends and pushes particles.";
+	Description = ByteString("活塞,激活时伸长并推动粒子").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

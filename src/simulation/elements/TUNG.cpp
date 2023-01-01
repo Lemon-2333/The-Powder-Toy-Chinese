@@ -8,7 +8,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_TUNG()
 {
 	Identifier = "DEFAULT_PT_TUNG";
-	Name = "TUNG";
+	Name = ByteString("钨").FromUtf8();
+	EName = "TUNG";
 	Colour = PIXPACK(0x505050);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -32,7 +33,7 @@ void Element::Element_TUNG()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Tungsten. Brittle metal with a very high melting point.";
+	Description = ByteString("钨. 脆性金属, 具有很高的熔点.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 

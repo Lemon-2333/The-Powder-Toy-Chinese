@@ -6,7 +6,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_TTAN()
 {
 	Identifier = "DEFAULT_PT_TTAN";
-	Name = "TTAN";
+	Name = ByteString("钛").FromUtf8();
+	EName = "TTAN";
 	Colour = PIXPACK(0x909090);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +31,7 @@ void Element::Element_TTAN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Titanium. Higher melting temperature than most other metals, blocks all air pressure.";
+	Description = ByteString("钛. 比大部分金属的熔点更高, 可以阻挡所有气压.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_HOT_GLOW|PROP_LIFE_DEC;
 

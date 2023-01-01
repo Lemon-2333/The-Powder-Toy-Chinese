@@ -3,7 +3,8 @@
 void Element::Element_SAND()
 {
 	Identifier = "DEFAULT_PT_SAND";
-	Name = "SAND";
+	Name = ByteString("沙子").FromUtf8();
+	EName = "SAND";
 	Colour = PIXPACK(0xFFD090);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -27,7 +28,7 @@ void Element::Element_SAND()
 	Weight = 90;
 
 	HeatConduct = 150;
-	Description = "Sand, Heavy particles. Melts into glass.";
+	Description = ByteString("沙子,重粉末,熔化时变为玻璃").FromUtf8();
 
 	Properties = TYPE_PART;
 

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="packagecache">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/subprojects/packagecache/tpt-libs-prebuilt-x86_64-windows-mingw-dynamic-debug-v20221223184203.zip!/" />
+      <root url="jar://$PROJECT_DIR$/subprojects/packagecache/tpt-libs-prebuilt-x86_64-windows-mingw-static-release-v20221223184203.zip!/" />
+      <root url="jar://$PROJECT_DIR$/subprojects/packagecache/tpt-libs-prebuilt-x86_64-windows-mingw-dynamic-release-v20221223184203.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

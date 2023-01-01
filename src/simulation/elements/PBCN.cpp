@@ -8,6 +8,7 @@ void Element::Element_PBCN()
 {
 	Identifier = "DEFAULT_PT_PBCN";
 	Name = "PBCN";
+	EName = "PBCN";
 	Colour = PIXPACK(0x3B1D0A);
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -31,7 +32,7 @@ void Element::Element_PBCN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Powered breakable clone.";
+	Description = ByteString("可控可破坏复制体").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NOCTYPEDRAW;
 

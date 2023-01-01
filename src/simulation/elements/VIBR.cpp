@@ -6,7 +6,8 @@ int Element_VIBR_graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_VIBR()
 {
 	Identifier = "DEFAULT_PT_VIBR";
-	Name = "VIBR";
+	Name = ByteString("振金").FromUtf8();
+	EName = "VIBR";
 	Colour = PIXPACK(0x005000);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -31,7 +32,7 @@ void Element::Element_VIBR()
 
 	DefaultProperties.temp = 273.15f;
 	HeatConduct = 251;
-	Description = "Vibranium. Stores energy and releases it in violent explosions.";
+	Description = ByteString("振金. 可以吸收并储存能量, 然后在剧烈的爆炸中释放.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 

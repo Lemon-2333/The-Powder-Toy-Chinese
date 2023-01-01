@@ -4,6 +4,7 @@ void Element::Element_NITR()
 {
 	Identifier = "DEFAULT_PT_NITR";
 	Name = "NITR";
+	EName = "NITR";
 	Colour = PIXPACK(0x20E010);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -28,7 +29,7 @@ void Element::Element_NITR()
 	Weight = 23;
 
 	HeatConduct = 50;
-	Description = "Nitroglycerin. Pressure sensitive explosive. Mix with CLST to make TNT.";
+	Description = ByteString("硝化甘油. 压敏炸药. 与粘土砂(CLST)混合后形成TNT").FromUtf8();
 
 	Properties = TYPE_LIQUID;
 

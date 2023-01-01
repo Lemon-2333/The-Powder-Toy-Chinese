@@ -7,7 +7,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PLNT()
 {
 	Identifier = "DEFAULT_PT_PLNT";
-	Name = "PLNT";
+	Name = ByteString("植物").FromUtf8();
+	EName = "PLNT";
 	Colour = PIXPACK(0x0CAC00);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -32,7 +33,7 @@ void Element::Element_PLNT()
 	Weight = 100;
 
 	HeatConduct = 65;
-	Description = "Plant, drinks water and grows.";
+	Description = ByteString("植物,能吸收水并生长.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_NEUTPENETRATE|PROP_LIFE_DEC;
 

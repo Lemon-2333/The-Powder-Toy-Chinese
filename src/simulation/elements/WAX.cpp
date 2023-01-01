@@ -3,7 +3,8 @@
 void Element::Element_WAX()
 {
 	Identifier = "DEFAULT_PT_WAX";
-	Name = "WAX";
+	Name = ByteString("蜡").FromUtf8();
+	EName = "WAX";
 	Colour = PIXPACK(0xF0F0BB);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -27,7 +28,7 @@ void Element::Element_WAX()
 	Weight = 100;
 
 	HeatConduct = 44;
-	Description = "Wax. Melts at moderately high temperatures.";
+	Description = ByteString("蜡,在稍高的温度下熔化.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

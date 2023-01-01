@@ -5,7 +5,8 @@ int Element_RFRG_update(UPDATE_FUNC_ARGS);
 void Element::Element_RFRG()
 {
 	Identifier = "DEFAULT_PT_RFRG";
-	Name = "RFRG";
+	Name = ByteString("冷剂").FromUtf8();
+	EName = "RFRG";
 	Colour = PIXPACK(0x72D2D4);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -29,7 +30,7 @@ void Element::Element_RFRG()
 	Weight = 1;
 
 	HeatConduct = 3;
-	Description = "Refrigerant. Heats up and liquefies under pressure.";
+	Description = ByteString("制冷剂,压力下液化并升温").FromUtf8();
 
 	Properties = TYPE_GAS|PROP_DEADLY;
 

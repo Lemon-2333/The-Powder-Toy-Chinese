@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_MERC()
 {
 	Identifier = "DEFAULT_PT_MERC";
-	Name = "MERC";
+	Name = ByteString("水银").FromUtf8();
+	EName = "MERC";
 	Colour = PIXPACK(0x736B6D);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -29,7 +30,7 @@ void Element::Element_MERC()
 	Weight = 91;
 
 	HeatConduct = 251;
-	Description = "Mercury. Volume changes with temperature, Conductive.";
+	Description = ByteString("水银. 体积随温度变化, 可以导电.").FromUtf8();
 
 	Properties = TYPE_LIQUID|PROP_CONDUCTS|PROP_NEUTABSORB|PROP_LIFE_DEC;
 

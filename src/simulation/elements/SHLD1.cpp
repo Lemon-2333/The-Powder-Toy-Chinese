@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_SHLD1()
 {
 	Identifier = "DEFAULT_PT_SHLD1";
-	Name = "SHLD";
+	Name = ByteString("护盾").FromUtf8();
+	EName = "SHLD";
 	Colour = PIXPACK(0xAAAAAA);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -29,7 +30,7 @@ void Element::Element_SHLD1()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Shield, spark it to grow.";
+	Description = ByteString("护盾,通电时增大.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 

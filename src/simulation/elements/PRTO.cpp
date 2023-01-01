@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PRTO()
 {
 	Identifier = "DEFAULT_PT_PRTO";
-	Name = "PRTO";
+	Name = ByteString("传出").FromUtf8();
+	EName = "PRTO";
 	Colour = PIXPACK(0x0020EB);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -30,7 +31,7 @@ void Element::Element_PRTO()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Portal OUT. Particles come out here. Also has temperature dependent channels. (same as WIFI)";
+	Description = ByteString("传送门出口,物质从这出来,有类似于WIFI的基于温度的频道").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

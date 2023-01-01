@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_WTRV()
 {
 	Identifier = "DEFAULT_PT_WTRV";
-	Name = "WTRV";
+	Name = ByteString("水气").FromUtf8();
+	EName = "WTRV";
 	Colour = PIXPACK(0xA0A0FF);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -30,7 +31,7 @@ void Element::Element_WTRV()
 
 	DefaultProperties.temp = R_TEMP + 100.0f + 273.15f;
 	HeatConduct = 48;
-	Description = "Steam. Produced from hot water.";
+	Description = ByteString("水蒸气,加热水产生").FromUtf8();
 
 	Properties = TYPE_GAS;
 

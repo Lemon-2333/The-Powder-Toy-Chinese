@@ -3,7 +3,8 @@
 void Element::Element_PSTS()
 {
 	Identifier = "DEFAULT_PT_PSTS";
-	Name = "PSTS";
+	Name = ByteString("固浆").FromUtf8();
+	EName = "PSTS";
 	Colour = PIXPACK(0x776677);
 	MenuVisible = 0;
 	MenuSection = SC_CRACKER;
@@ -28,7 +29,7 @@ void Element::Element_PSTS()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Solid form of PSTE.";
+	Description = ByteString("固态的浆糊").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

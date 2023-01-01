@@ -6,7 +6,8 @@ static void changeType(ELEMENT_CHANGETYPE_FUNC_ARGS);
 void Element::Element_SPAWN()
 {
 	Identifier = "DEFAULT_PT_SPAWN";
-	Name = "SPWN";
+	Name = ByteString("生成").FromUtf8();
+	EName = "SPWN";
 	Colour = PIXPACK(0xAAAAAA);
 	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +31,7 @@ void Element::Element_SPAWN()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "STKM spawn point.";
+	Description = ByteString("火柴人的出生点.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

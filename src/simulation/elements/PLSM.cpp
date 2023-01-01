@@ -7,7 +7,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_PLSM()
 {
 	Identifier = "DEFAULT_PT_PLSM";
-	Name = "PLSM";
+	Name = ByteString("等离").FromUtf8();
+	EName = "PLSM";
 	Colour = PIXPACK(0xBB99FF);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -32,7 +33,7 @@ void Element::Element_PLSM()
 
 	DefaultProperties.temp = MAX_TEMP;
 	HeatConduct = 5;
-	Description = "Plasma, extremely hot.";
+	Description = ByteString("等离子体,超级热.").FromUtf8();
 
 	Properties = TYPE_GAS|PROP_LIFE_DEC|PROP_LIFE_KILL;
 

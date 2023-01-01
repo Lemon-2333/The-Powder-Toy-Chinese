@@ -3,7 +3,8 @@
 void Element::Element_THRM()
 {
 	Identifier = "DEFAULT_PT_THRM";
-	Name = "THRM";
+	Name = ByteString("铝热").FromUtf8();
+	EName = "THRM";
 	Colour = PIXPACK(0xA08090);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -27,7 +28,7 @@ void Element::Element_THRM()
 	Weight = 90;
 
 	HeatConduct = 211;
-	Description = "Thermite. Burns at extremely high temperature.";
+	Description = ByteString("铝热剂. 燃烧时产生高温.").FromUtf8();
 
 	Properties = TYPE_PART;
 

@@ -7,7 +7,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_QRTZ()
 {
 	Identifier = "DEFAULT_PT_QRTZ";
-	Name = "QRTZ";
+	Name = ByteString("石英").FromUtf8();
+	EName = "QRTZ";
 	Colour = PIXPACK(0xAADDDD);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -31,8 +32,7 @@ void Element::Element_QRTZ()
 	Weight = 100;
 
 	HeatConduct = 3;
-	Description = "Quartz, breakable mineral. Conducts but becomes brittle at lower temperatures.";
-
+	Description = ByteString("石英,可破碎的矿物,低温下能导电,但会变脆").FromUtf8();
 	Properties = TYPE_SOLID|PROP_HOT_GLOW|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

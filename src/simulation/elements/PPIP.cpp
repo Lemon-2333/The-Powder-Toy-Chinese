@@ -6,7 +6,8 @@ int Element_PIPE_graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PPIP()
 {
 	Identifier = "DEFAULT_PT_PPIP";
-	Name = "PPIP";
+	Name = ByteString("控管").FromUtf8();
+	EName = "PPIP";
 	Colour = PIXPACK(0x444466);
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -31,7 +32,7 @@ void Element::Element_PPIP()
 
 	DefaultProperties.temp = 273.15f;
 	HeatConduct = 0;
-	Description = "Powered version of PIPE, use PSCN/NSCN to Activate/Deactivate.";
+	Description = ByteString("可控的管道,用法与管道一致,能用PSCN/NSCN控制").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 

@@ -4,6 +4,7 @@
 const char *const introTextData =
 	"\bl\bU" APPNAME "\bU - Version " MTOS(SAVE_VERSION) "." MTOS(MINOR_VERSION) " - https://powdertoy.co.uk, irc.libera.chat #powder, https://tpt.io/discord\n"
 	"\n"
+	"\bgQQ群汉化,版本-\bU 0.2-bate  qq群号:99309202"
 	"\n"
 	"\bgControl+C/V/X分别是复制,粘贴,剪切.\n"
 	"\bg要选择一种材料,请将鼠标悬停在右侧的其中一个图标上,它将显示该组中的一系列元素.\n"
@@ -25,7 +26,9 @@ const char *const introTextData =
 	"\bgSimon Robertshaw, Skresanov Savely, cracker64, Catelite, Bryan Hoyle, Nathan Cousins, jacksonmj,\n"
 	"\bgFelix Wallin, Lieuwe Mosch, Anthony Boot, Me4502, MaksProg, jacob1, mniip, LBPHacker\n"
 	"\n"
-	"\bg汉化: \bg程序:Lemon-2333 github:\br https://github.com/Lemon-2333/The-Powder-Toy-Chinese\n"
+	"\bg汉化:Lemon-2333 Ethanethiol Akias" 
+	"\n"
+	"\bg程序:Lemon-2333 github:\br https://github.com/Lemon-2333/The-Powder-Toy-Chinese\n"
 	"\n"
 #ifndef BETA
 	"\bg要使用保存等在线功能,您需要在以下位置注册:\br https://powdertoy.co.uk/Register.html\n"

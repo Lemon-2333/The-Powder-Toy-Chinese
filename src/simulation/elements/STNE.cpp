@@ -3,7 +3,8 @@
 void Element::Element_STNE()
 {
 	Identifier = "DEFAULT_PT_STNE";
-	Name = "STNE";
+	Name = ByteString("石粉").FromUtf8();
+	EName = "STNE";
 	Colour = PIXPACK(0xA0A0A0);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -27,7 +28,7 @@ void Element::Element_STNE()
 	Weight = 90;
 
 	HeatConduct = 150;
-	Description = "Heavy particles. Meltable.";
+	Description = ByteString("重粉末,可熔化").FromUtf8();
 
 	Properties = TYPE_PART;
 

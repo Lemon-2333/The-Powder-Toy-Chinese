@@ -8,7 +8,8 @@ static bool ctypeDraw(CTYPEDRAW_FUNC_ARGS);
 void Element::Element_STOR()
 {
 	Identifier = "DEFAULT_PT_STOR";
-	Name = "STOR";
+	Name = ByteString("储存").FromUtf8();
+	EName = "STOR";
 	Colour = PIXPACK(0x50DFDF);
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -32,7 +33,7 @@ void Element::Element_STOR()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Storage. Captures and stores a single particle. Releases when charged with PSCN, also passes to PIPE.";
+	Description = ByteString("存储器,可以捕捉并储存单个粒子,用P型半导体激活时释放其中的粒子,也可以将粒子直接传递给管道.").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NOCTYPEDRAW;
 

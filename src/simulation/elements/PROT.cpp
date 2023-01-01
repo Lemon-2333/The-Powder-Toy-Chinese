@@ -8,7 +8,8 @@ static int DeutImplosion(Simulation * sim, int n, int x, int y, float temp, int 
 void Element::Element_PROT()
 {
 	Identifier = "DEFAULT_PT_PROT";
-	Name = "PROT";
+	Name = ByteString("质子").FromUtf8();
+	EName = "PROT";
 	Colour = PIXPACK(0x990000);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -32,7 +33,7 @@ void Element::Element_PROT()
 	Weight = -1;
 
 	HeatConduct = 61;
-	Description = "Protons. Transfer heat to materials, and removes sparks.";
+	Description = ByteString("质子,能传递热量,能移除电脉冲").FromUtf8();
 
 	Properties = TYPE_ENERGY;
 

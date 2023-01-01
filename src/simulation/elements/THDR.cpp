@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_THDR()
 {
 	Identifier = "DEFAULT_PT_THDR";
-	Name = "THDR";
+	Name = ByteString("球电").FromUtf8();
+	EName = "THDR";
 	Colour = PIXPACK(0xFFFFA0);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -31,7 +32,7 @@ void Element::Element_THDR()
 
 	DefaultProperties.temp = 9000.0f + 273.15f;
 	HeatConduct = 1;
-	Description = "Lightning! Very hot, inflicts damage upon most materials, and transfers current to metals.";
+	Description = ByteString("球状闪电! 非常热, 对大多数材料造成损害, 并将电流转移到金属上.").FromUtf8();
 
 	Properties = TYPE_PART;
 

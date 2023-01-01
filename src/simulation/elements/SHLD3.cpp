@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_SHLD3()
 {
 	Identifier = "DEFAULT_PT_SHLD3";
-	Name = "SHD3";
+	Name = ByteString("盾3").FromUtf8();
+	EName = "SHD3";
 	Colour = PIXPACK(0x444444);
 	MenuVisible = 0;
 	MenuSection = SC_CRACKER2;
@@ -29,7 +30,7 @@ void Element::Element_SHLD3()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Shield lvl 3.";
+	Description = ByteString("三级护盾").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 

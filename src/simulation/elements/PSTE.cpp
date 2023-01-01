@@ -3,7 +3,8 @@
 void Element::Element_PSTE()
 {
 	Identifier = "DEFAULT_PT_PSTE";
-	Name = "PSTE";
+	Name = ByteString("浆糊").FromUtf8();
+	EName = "PSTE";
 	Colour = PIXPACK(0xAA99AA);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -28,7 +29,7 @@ void Element::Element_PSTE()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Colloid, Hardens under pressure.";
+	Description = ByteString("一种胶状物质,压力下硬化").FromUtf8();
 
 	Properties = TYPE_LIQUID;
 

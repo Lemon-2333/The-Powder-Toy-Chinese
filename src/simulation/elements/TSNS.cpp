@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_TSNS()
 {
 	Identifier = "DEFAULT_PT_TSNS";
-	Name = "TSNS";
+	Name = ByteString("温感").FromUtf8();
+	EName = "TSNS";
 	Colour = PIXPACK(0xFD00D5);
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -29,7 +30,7 @@ void Element::Element_TSNS()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Temperature sensor, creates a spark when there's a nearby particle with a greater temperature.";
+	Description = ByteString("温度传感器. 当附近有温度更高的物质时, 就会发出电脉冲.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

@@ -7,7 +7,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_SLCN()
 {
 	Identifier = "DEFAULT_PT_SLCN";
-	Name = "SLCN";
+	Name = ByteString("硅粉").FromUtf8();
+	EName = "SLCN";
 	Colour = PIXPACK(0xBCCDDF);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -31,7 +32,7 @@ void Element::Element_SLCN()
 	Weight = 90;
 
 	HeatConduct = 100;
-	Description = "Powdered Silicon. A key ingredient in producing multiple materials.";
+	Description = ByteString("粉末状的硅,是产生多种物质的关键原料").FromUtf8();
 
 	Properties = TYPE_PART | PROP_CONDUCTS | PROP_HOT_GLOW | PROP_LIFE_DEC;
 

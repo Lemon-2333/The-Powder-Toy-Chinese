@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PVOD()
 {
 	Identifier = "DEFAULT_PT_PVOD";
-	Name = "PVOD";
+	Name = ByteString("控虚").FromUtf8();
+	EName = "PVOD";
 	Colour = PIXPACK(0x792020);
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -30,7 +31,7 @@ void Element::Element_PVOD()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Powered VOID. When activated, destroys entering particles.";
+	Description = ByteString("可控虚空,激活时摧毁接触的粒子").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

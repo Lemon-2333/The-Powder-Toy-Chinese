@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_NBLE()
 {
 	Identifier = "DEFAULT_PT_NBLE";
-	Name = "NBLE";
+	Name = ByteString("惰气").FromUtf8();
+	EName = "NBLE";
 	Colour = PIXPACK(0xEB4917);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -31,7 +32,7 @@ void Element::Element_NBLE()
 
 	DefaultProperties.temp = R_TEMP + 2.0f + 273.15f;
 	HeatConduct = 106;
-	Description = "Noble Gas. Diffuses and conductive. Ionizes into plasma when introduced to electricity.";
+	Description = ByteString("惰性气体. 自然产生低压并导电. 通电后能电离成等离子体.").FromUtf8();
 
 	Properties = TYPE_GAS|PROP_CONDUCTS|PROP_LIFE_DEC;
 

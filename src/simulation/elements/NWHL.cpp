@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_NWHL()
 {
 	Identifier = "DEFAULT_PT_NWHL";
-	Name = "WHOL";
+	Name = ByteString("白洞").FromUtf8();
+	EName = "WHOL";
 	Colour = PIXPACK(0xFFFFFF);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -29,7 +30,7 @@ void Element::Element_NWHL()
 	Weight = 100;
 
 	HeatConduct = 186;
-	Description = "White hole, pushes away other particles with gravity. (Requires Newtonian gravity)";
+	Description = ByteString("白洞. 产生斥力推开粒子.(需开启牛顿万有引力)").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

@@ -3,7 +3,8 @@
 void Element::Element_SALT()
 {
 	Identifier = "DEFAULT_PT_SALT";
-	Name = "SALT";
+	Name = ByteString("盐").FromUtf8();
+	EName = "SALT";
 	Colour = PIXPACK(0xFFFFFF);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -27,7 +28,7 @@ void Element::Element_SALT()
 	Weight = 75;
 
 	HeatConduct = 110;
-	Description = "Salt, dissolves in water.";
+	Description = ByteString("盐,溶于水.").FromUtf8();
 
 	Properties = TYPE_PART;
 

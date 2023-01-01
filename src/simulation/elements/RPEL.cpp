@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_RPEL()
 {
 	Identifier = "DEFAULT_PT_RPEL";
-	Name = "RPEL";
+	Name = ByteString("反弹").FromUtf8();
+	EName = "RPEL";
 	Colour = PIXPACK(0x99CC00);
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -30,7 +31,7 @@ void Element::Element_RPEL()
 
 	DefaultProperties.temp = 20.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Repels or attracts particles based on its temperature.";
+	Description = ByteString("根据自身温度,吸引或排斥周围的粒子").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

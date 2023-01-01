@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_SNOW()
 {
 	Identifier = "DEFAULT_PT_SNOW";
-	Name = "SNOW";
+	Name = ByteString("雪").FromUtf8();
+	EName = "SNOW";
 	Colour = PIXPACK(0xC0E0FF);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -31,7 +32,7 @@ void Element::Element_SNOW()
 
 	DefaultProperties.temp = R_TEMP - 30.0f + 273.15f;
 	HeatConduct = 46;
-	Description = "Light particles. Created when ICE breaks under pressure.";
+	Description = ByteString("轻粉末,冰在压力下破碎时产生.").FromUtf8();
 
 	Properties = TYPE_PART|PROP_NEUTPASS;
 

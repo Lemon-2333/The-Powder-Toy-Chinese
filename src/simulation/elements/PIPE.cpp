@@ -11,7 +11,8 @@ void Element_SOAP_detach(Simulation * sim, int i);
 void Element::Element_PIPE()
 {
 	Identifier = "DEFAULT_PT_PIPE";
-	Name = "PIPE";
+	Name = ByteString("管道").FromUtf8();
+	EName = "PIPE";
 	Colour = PIXPACK(0x444444);
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -36,7 +37,7 @@ void Element::Element_PIPE()
 
 	DefaultProperties.temp = 273.15f;
 	HeatConduct = 0;
-	Description = "PIPE, moves particles around. Once the BRCK generates, erase some for the exit. Then the PIPE generates and is usable.";
+	Description = ByteString("移动粒子.放置一段时间后周围产生BRCK,擦除部分BRCK以生成出口,之后管道就可以使用了.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 

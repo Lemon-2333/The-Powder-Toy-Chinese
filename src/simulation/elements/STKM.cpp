@@ -13,7 +13,8 @@ void Element_STKM_interact(Simulation *sim, playerst *playerp, int i, int x, int
 void Element::Element_STKM()
 {
 	Identifier = "DEFAULT_PT_STKM";
-	Name = "STKM";
+	Name = ByteString("人").FromUtf8();
+	EName = "STKM";
 	Colour = PIXPACK(0xFFE0A0);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -39,7 +40,7 @@ void Element::Element_STKM()
 
 	DefaultProperties.temp = R_TEMP + 14.6f + 273.15f;
 	HeatConduct = 0;
-	Description = "Stickman. Don't kill him! Control with the arrow keys.";
+	Description = ByteString("火柴人,别弄死他!用上下左右键控制").FromUtf8();
 
 	Properties = PROP_NOCTYPEDRAW;
 

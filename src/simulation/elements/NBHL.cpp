@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_NBHL()
 {
 	Identifier = "DEFAULT_PT_NBHL";
-	Name = "BHOL";
+	Name = ByteString("黑洞").FromUtf8();
+	EName = "BHOL";
 	Colour = PIXPACK(0x202020);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -29,7 +30,7 @@ void Element::Element_NBHL()
 	Weight = 100;
 
 	HeatConduct = 186;
-	Description = "Black hole, sucks in particles using gravity. (Requires Newtonian gravity)";
+	Description = ByteString("黑洞. 产生重力并吸收粒子.(需开启牛顿万有引力)").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

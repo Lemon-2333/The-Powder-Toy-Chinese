@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_SWCH()
 {
 	Identifier = "DEFAULT_PT_SWCH";
-	Name = "SWCH";
+	Name = ByteString("开关").FromUtf8();
+	EName = "SWCH";
 	Colour = PIXPACK(0x103B11);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -30,7 +31,7 @@ void Element::Element_SWCH()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Only conducts when switched on. (PSCN switches on, NSCN switches off)";
+	Description = ByteString("只有在被打开时可以导电(用P型半导体打开，N型半导体关闭)").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

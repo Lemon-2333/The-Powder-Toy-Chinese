@@ -8,7 +8,8 @@ void Element_SOAP_detach(Simulation * sim, int i);
 void Element::Element_PRTI()
 {
 	Identifier = "DEFAULT_PT_PRTI";
-	Name = "PRTI";
+	Name = ByteString("传入").FromUtf8();
+	EName = "PRTI";
 	Colour = PIXPACK(0xEB5917);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -32,7 +33,7 @@ void Element::Element_PRTI()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Portal IN. Particles go in here. Also has temperature dependent channels. (same as WIFI)";
+	Description = ByteString("传送门入口,物质从这进入,有类似于WIFI的基于温度的频道.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

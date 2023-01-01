@@ -3,7 +3,8 @@
 void Element::Element_OIL()
 {
 	Identifier = "DEFAULT_PT_OIL";
-	Name = "OIL";
+	Name = ByteString("石油").FromUtf8();
+	EName = "OIL";
 	Colour = PIXPACK(0x404010);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -27,7 +28,7 @@ void Element::Element_OIL()
 	Weight = 20;
 
 	HeatConduct = 42;
-	Description = "Flammable, turns into GAS at low pressure or high temperature.";
+	Description = ByteString("石油. 易燃, 在低压或高温下转化为气体.").FromUtf8();
 
 	Properties = TYPE_LIQUID | PROP_NEUTPASS;
 

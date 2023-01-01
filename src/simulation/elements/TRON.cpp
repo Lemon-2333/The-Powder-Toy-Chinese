@@ -11,7 +11,8 @@ static int new_tronhead(Simulation * sim, int x, int y, int i, int direction);
 void Element::Element_TRON()
 {
 	Identifier = "DEFAULT_PT_TRON";
-	Name = "TRON";
+	Name = ByteString("智子").FromUtf8();
+	EName = "TRON";
 	Colour = PIXPACK(0xA9FF00);
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -36,7 +37,7 @@ void Element::Element_TRON()
 
 	DefaultProperties.temp = 0.0f;
 	HeatConduct = 40;
-	Description = "Smart particles, Travels in straight lines and avoids obstacles. Grows with time.";
+	Description = ByteString("智能微粒. 做直线运动, 会智能躲避障碍, 随时间流逝尾巴会变长.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC|PROP_LIFE_KILL;
 

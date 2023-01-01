@@ -5,7 +5,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_TESC()
 {
 	Identifier = "DEFAULT_PT_TESC";
-	Name = "TESC";
+	Name = ByteString("线圈").FromUtf8();
+	EName = "TESC";
 	Colour = PIXPACK(0x707040);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -29,7 +30,7 @@ void Element::Element_TESC()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Tesla coil! Creates lightning when sparked.";
+	Description = ByteString("特斯拉线圈! 通电时产生闪电.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 

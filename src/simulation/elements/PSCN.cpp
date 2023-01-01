@@ -3,7 +3,8 @@
 void Element::Element_PSCN()
 {
 	Identifier = "DEFAULT_PT_PSCN";
-	Name = "PSCN";
+	Name = ByteString("P半").FromUtf8();
+	EName = "PSCN";
 	Colour = PIXPACK(0x805050);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -28,7 +29,7 @@ void Element::Element_PSCN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "P-Type Silicon, Will transfer current to any conductor.";
+	Description = ByteString("P型半导体,可以把电流传递给任何导体").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 

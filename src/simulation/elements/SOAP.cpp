@@ -7,7 +7,8 @@ static void changeType(ELEMENT_CHANGETYPE_FUNC_ARGS);
 void Element::Element_SOAP()
 {
 	Identifier = "DEFAULT_PT_SOAP";
-	Name = "SOAP";
+	Name = ByteString("肥皂").FromUtf8();
+	EName = "SOAP";
 	Colour = PIXPACK(0xF5F5DC);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -32,7 +33,7 @@ void Element::Element_SOAP()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Soap. Creates bubbles, washes off deco color, and cures virus.";
+	Description = ByteString("肥皂水,能产生泡泡,并洗掉装饰颜色,可清除病毒.").FromUtf8();
 
 	Properties = TYPE_LIQUID|PROP_NEUTPENETRATE|PROP_LIFE_DEC;
 

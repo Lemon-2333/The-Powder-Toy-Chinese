@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_O2()
 {
 	Identifier = "DEFAULT_PT_O2";
-	Name = "OXYG";
+	Name = ByteString("氧气").FromUtf8();
+	EName = "OXYG";
 	Colour = PIXPACK(0x80A0FF);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -29,7 +30,7 @@ void Element::Element_O2()
 	Weight = 1;
 
 	HeatConduct = 70;
-	Description = "Oxygen gas. Ignites easily.";
+	Description = ByteString("氧气. 易燃.").FromUtf8();
 
 	Properties = TYPE_GAS;
 

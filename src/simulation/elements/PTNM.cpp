@@ -7,7 +7,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_PTNM()
 {
 	Identifier = "DEFAULT_PT_PTNM";
-	Name = "PTNM";
+	Name = ByteString("铂").FromUtf8();
+	EName = "PTNM";
 	Colour = PIXPACK(0xD5E0EB);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +31,7 @@ void Element::Element_PTNM()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Platinum. Catalyzes certain reactions.";
+	Description = ByteString("铂,能催化特定反应").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_CONDUCTS | PROP_LIFE_DEC | PROP_HOT_GLOW | PROP_SPARKSETTLE;
 

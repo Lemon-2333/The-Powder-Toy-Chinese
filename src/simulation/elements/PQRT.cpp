@@ -7,7 +7,8 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_PQRT()
 {
 	Identifier = "DEFAULT_PT_PQRT";
-	Name = "PQRT";
+	Name = ByteString("英粉").FromUtf8();
+	EName = "PQRT";
 	Colour = PIXPACK(0x88BBBB);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -31,7 +32,7 @@ void Element::Element_PQRT()
 	Weight = 90;
 
 	HeatConduct = 3;
-	Description = "Powdered quartz, broken form of QRTZ.";
+	Description = ByteString("粉末状石英,QRTZ破碎时产生").FromUtf8();
 
 	Properties = TYPE_PART| PROP_HOT_GLOW;
 

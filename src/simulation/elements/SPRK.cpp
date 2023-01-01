@@ -7,7 +7,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_SPRK()
 {
 	Identifier = "DEFAULT_PT_SPRK";
-	Name = "SPRK";
+	Name = ByteString("电").FromUtf8();
+	EName = "SPRK";
 	Colour = PIXPACK(0xFFFF80);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -32,7 +33,7 @@ void Element::Element_SPRK()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Electricity. The basis of all electronics in TPT, travels along wires and other conductive elements.";
+	Description = ByteString("电,TPT中所有电子设备的基础,在导线或其他导电物质中传播.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 

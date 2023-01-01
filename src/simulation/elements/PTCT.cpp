@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_PTCT()
 {
 	Identifier = "DEFAULT_PT_PTCT";
-	Name = "PTCT";
+	Name = ByteString("冷导").FromUtf8();
+	EName = "PTCT";
 	Colour = PIXPACK(0x405050);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -29,7 +30,7 @@ void Element::Element_PTCT()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Semi-conductor. Only conducts electricity when cold. (Less than 100C)";
+	Description = ByteString("半导体,只在低温下(低于100摄氏度)导电.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 

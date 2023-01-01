@@ -5,7 +5,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_SMKE()
 {
 	Identifier = "DEFAULT_PT_SMKE";
-	Name = "SMKE";
+	Name = ByteString("烟").FromUtf8();
+	EName = "SMKE";
 	Colour = PIXPACK(0x222222);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -30,7 +31,7 @@ void Element::Element_SMKE()
 
 	DefaultProperties.temp = R_TEMP + 320.0f + 273.15f;
 	HeatConduct = 88;
-	Description = "Smoke, created by fire.";
+	Description = ByteString("烟,由火焰产生.").FromUtf8();
 
 	Properties = TYPE_GAS|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 

@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_URAN()
 {
 	Identifier = "DEFAULT_PT_URAN";
-	Name = "URAN";
+	Name = ByteString("铀").FromUtf8();
+	EName = "URAN";
 	Colour = PIXPACK(0x707020);
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -31,7 +32,7 @@ void Element::Element_URAN()
 
 	DefaultProperties.temp = R_TEMP + 30.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Uranium. Heavy particles. Generates heat under pressure.";
+	Description = ByteString("铀. 重粒子, 在压力下产生热量.").FromUtf8();
 
 	Properties = TYPE_PART | PROP_RADIOACTIVE;
 

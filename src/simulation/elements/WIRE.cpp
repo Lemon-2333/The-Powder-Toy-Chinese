@@ -7,6 +7,7 @@ void Element::Element_WIRE()
 {
 	Identifier = "DEFAULT_PT_WIRE";
 	Name = "WWLD";
+	EName = "WWLD";
 	Colour = PIXPACK(0xFFCC00);
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -30,7 +31,7 @@ void Element::Element_WIRE()
 	Weight = 100;
 
 	HeatConduct = 250;
-	Description = "WireWorld wires, conducts based on a set of GOL-like rules.";
+	Description = ByteString("游戏WireWorld中的线,按照一种类似于生命游戏的法则导电.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

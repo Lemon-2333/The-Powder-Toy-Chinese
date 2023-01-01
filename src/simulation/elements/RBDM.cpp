@@ -3,6 +3,7 @@
 void Element::Element_RBDM()
 {
 	Identifier = "DEFAULT_PT_RBDM";
+	Name = ByteString("铷").FromUtf8();
 	Name = "RBDM";
 	Colour = PIXPACK(0xCCCCCC);
 	MenuVisible = 1;
@@ -27,7 +28,7 @@ void Element::Element_RBDM()
 	Weight = 100;
 
 	HeatConduct = 240;
-	Description = "Rubidium. Explosive, especially on contact with water. Low melting point.";
+	Description = ByteString("铷,易爆,与水接触时爆炸,低熔点").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 

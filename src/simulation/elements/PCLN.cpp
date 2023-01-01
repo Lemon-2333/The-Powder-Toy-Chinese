@@ -7,7 +7,8 @@ bool Element_PCLN_ctypeDraw(CTYPEDRAW_FUNC_ARGS);
 void Element::Element_PCLN()
 {
 	Identifier = "DEFAULT_PT_PCLN";
-	Name = "PCLN";
+	Name = ByteString("控复").FromUtf8();
+	EName = "PCLN";
 	Colour = PIXPACK(0x3B3B0A);
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -31,7 +32,7 @@ void Element::Element_PCLN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Powered clone. When activated, duplicates any particles it touches.";
+	Description = ByteString("可控的复制体,激活后能复制它碰到过的物质").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NOCTYPEDRAW;
 

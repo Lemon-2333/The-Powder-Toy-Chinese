@@ -7,7 +7,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_WOOD()
 {
 	Identifier = "DEFAULT_PT_WOOD";
-	Name = "WOOD";
+	Name = ByteString("木头").FromUtf8();
+	EName = "WOOD";
 	Colour = PIXPACK(0xC0A040);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -31,7 +32,7 @@ void Element::Element_WOOD()
 	Weight = 100;
 
 	HeatConduct = 164;
-	Description = "Wood, flammable.";
+	Description = ByteString("木头,可燃").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE;
 

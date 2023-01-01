@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PUMP()
 {
 	Identifier = "DEFAULT_PT_PUMP";
-	Name = "PUMP";
+	Name = ByteString("气泵").FromUtf8();
+	EName = "PUMP";
 	Colour = PIXPACK(0x0A0A3B);
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -31,7 +32,7 @@ void Element::Element_PUMP()
 
 	DefaultProperties.temp = 273.15f;
 	HeatConduct = 0;
-	Description = "Pressure pump. Changes pressure to its temp when activated. (use HEAT/COOL).";
+	Description = ByteString("气压泵,激活时产生等同于自身温度的压强(可用加热/制冷工具改变温度)").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

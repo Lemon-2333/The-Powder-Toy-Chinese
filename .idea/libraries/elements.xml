@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="elements">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/simulation/elements/压缩包-部分未汉化元素-第四部分.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/simulation/elements/压缩包-部分未汉化元素-第五部分.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/simulation/elements/压缩包-部分未汉化元素-第三部分.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/simulation/elements/压缩包-部分未汉化元素.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/simulation/elements/压缩包-部分未汉化元素-第二部分.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

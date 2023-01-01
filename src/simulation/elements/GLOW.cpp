@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_GLOW()
 {
 	Identifier = "DEFAULT_PT_GLOW";
-	Name = ByteString("荧光液").FromUtf8();
+	Name = ByteString("荧液").FromUtf8();
 	EName = "GLOW";
 	Colour = PIXPACK(0x445464);
 	MenuVisible = 1;

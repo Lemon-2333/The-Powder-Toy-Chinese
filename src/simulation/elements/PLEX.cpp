@@ -4,6 +4,7 @@ void Element::Element_PLEX()
 {
 	Identifier = "DEFAULT_PT_PLEX";
 	Name = "C-4";
+	EName = "C-4";
 	Colour = PIXPACK(0xD080E0);
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -28,7 +29,7 @@ void Element::Element_PLEX()
 	Weight = 100;
 
 	HeatConduct = 88;
-	Description = "Solid pressure sensitive explosive.";
+	Description = ByteString("固态的压敏爆炸物").FromUtf8();
 
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE;
 

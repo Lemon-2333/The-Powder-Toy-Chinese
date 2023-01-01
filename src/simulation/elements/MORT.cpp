@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_MORT()
 {
 	Identifier = "DEFAULT_PT_MORT";
-	Name = "MORT";
+	Name = ByteString("烟尘").FromUtf8();
+	EName = "MORT";
 	Colour = PIXPACK(0xE0E0E0);
 	MenuVisible = 1;
 	MenuSection = SC_CRACKER2;
@@ -30,7 +31,7 @@ void Element::Element_MORT()
 
 	DefaultProperties.temp = R_TEMP + 4.0f + 273.15f;
 	HeatConduct = 60;
-	Description = "Steam Train.";
+	Description = ByteString("蒸汽火车.").FromUtf8();
 
 	Properties = TYPE_GAS;
 

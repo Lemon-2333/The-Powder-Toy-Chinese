@@ -6,7 +6,8 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_SPNG()
 {
 	Identifier = "DEFAULT_PT_SPNG";
-	Name = "SPNG";
+	Name = ByteString("海绵").FromUtf8();
+	EName = "SPNG";
 	Colour = PIXPACK(0xFFBE30);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +31,7 @@ void Element::Element_SPNG()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Sponge, absorbs water. Is not a moving solid.";
+	Description = ByteString("海绵,能吸水.并不是一种可移动的固体.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

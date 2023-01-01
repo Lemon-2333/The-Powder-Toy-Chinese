@@ -5,7 +5,8 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_VSNS()
 {
 	Identifier = "DEFAULT_PT_VSNS";
-	Name = "VSNS";
+	Name = ByteString("速感").FromUtf8();
+	EName = "VSNS";
 	Colour = PIXPACK(0x7C9C00);
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -30,7 +31,7 @@ void Element::Element_VSNS()
 
 	DefaultProperties.temp = 4.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Velocity sensor, creates a spark when there's a nearby particle with velocity higher than its temperature.";
+	Description = ByteString("速度传感器. 当速度高于传感器温度的粒子在附近时, 速度传感器会生成SPRK.").FromUtf8();
 
 	Properties = TYPE_SOLID;
 

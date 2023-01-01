@@ -3,7 +3,8 @@
 void Element::Element_MWAX()
 {
 	Identifier = "DEFAULT_PT_MWAX";
-	Name = "MWAX";
+	Name = ByteString("蜡油").FromUtf8();
+	EName = "MWAX";
 	Colour = PIXPACK(0xE0E0AA);
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -28,7 +29,7 @@ void Element::Element_MWAX()
 
 	DefaultProperties.temp = R_TEMP + 28.0f + 273.15f;
 	HeatConduct = 44;
-	Description = "Liquid Wax. Hardens into WAX at 45 degrees.";
+	Description = ByteString("熔化的蜡. 45℃时凝固成蜡(WAX).").FromUtf8();
 
 	Properties = TYPE_LIQUID;
 
