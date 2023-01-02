@@ -5,9 +5,10 @@ static int perform(Simulation * sim, Particle * cpart, int x, int y, int brushX,
 void SimTool::Tool_COOL()
 {
 	Identifier = "DEFAULT_TOOL_COOL";
-	Name = "COOL";
+	Name = ByteString("制冷").FromUtf8();
+	EName = "COOL";
 	Colour = PIXPACK(0x00DDFF);
-	Description = "Cools the targeted element.";
+	Description = ByteString("减低目标元素温度.").FromUtf8();
 	Perform = &perform;
 }
 

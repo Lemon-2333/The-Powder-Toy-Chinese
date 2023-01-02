@@ -3,7 +3,7 @@
 void Element::Element_NITR()
 {
 	Identifier = "DEFAULT_PT_NITR";
-	Name = "NITR";
+	Name = ByteString("硝油").FromUtf8();
 	EName = "NITR";
 	Colour = PIXPACK(0x20E010);
 	MenuVisible = 1;

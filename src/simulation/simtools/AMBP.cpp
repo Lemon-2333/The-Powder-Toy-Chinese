@@ -5,9 +5,10 @@ static int perform(Simulation * sim, Particle * cpart, int x, int y, int brushX,
 void SimTool::Tool_AMBP()
 {
 	Identifier = "DEFAULT_TOOL_AMBP";
-	Name = "AMBP";
+	Name = ByteString("增环").FromUtf8();
+	EName = "AMBP";
 	Colour = PIXPACK(0xFFDD00);
-	Description = "Increases ambient air temperature.";
+	Description = ByteString("环境热增加工具,增加环境空气温度.需打开环境热模拟").FromUtf8();
 	Perform = &perform;
 }
 

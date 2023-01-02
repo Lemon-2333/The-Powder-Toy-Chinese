@@ -3,7 +3,7 @@
 void Element::Element_NSCN()
 {
 	Identifier = "DEFAULT_PT_NSCN";
-	Name = "NSCN";
+	Name = ByteString("N型硅").FromUtf8();
 	EName = "NSCN";
 	Colour = PIXPACK(0x505080);
 	MenuVisible = 1;

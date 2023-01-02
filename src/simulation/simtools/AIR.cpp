@@ -6,9 +6,10 @@ static int perform(Simulation * sim, Particle * cpart, int x, int y, int brushX,
 void SimTool::Tool_AIR()
 {
 	Identifier = "DEFAULT_TOOL_AIR";
-	Name = "AIR";
+	Name = ByteString("空气").FromUtf8();
+	EName = "AIR";
 	Colour = PIXPACK(0xFFFFFF);
-	Description = "Air, creates airflow and pressure.";
+	Description = ByteString("空气,产生气流和压力.").FromUtf8();
 	Perform = &perform;
 }
 

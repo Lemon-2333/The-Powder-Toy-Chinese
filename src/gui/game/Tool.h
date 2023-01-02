@@ -47,8 +47,9 @@ class SignTool: public Tool
 {
 public:
 	GameModel * gameModel;
-	SignTool(GameModel *model):
-	Tool(0, "SIGN", "Sign. Displays text. Click on a sign to edit it or anywhere else to place a new one.", 0, 0, 0, "DEFAULT_UI_SIGN", SignTool::GetIcon),
+	SignTool(GameModel *model,String Name,String Description):
+	//Tool(0, "SIGN", "Sign. Displays text. Click on a sign to edit it or anywhere else to place a new one.", 0, 0, 0, "DEFAULT_UI_SIGN", SignTool::GetIcon),
+	Tool(0, Name, Description, 0, 0, 0, "DEFAULT_UI_SIGN", SignTool::GetIcon),
 	  gameModel(model)
 	{
 	}
@@ -65,8 +66,9 @@ class SampleTool: public Tool
 {
 	GameModel * gameModel;
 public:
-	SampleTool(GameModel *model):
-	Tool(0, "SMPL", "Sample an element on the screen.", 0, 0, 0, "DEFAULT_UI_SAMPLE", SampleTool::GetIcon),
+	SampleTool(GameModel *model,String Name,String Description):
+	//Tool(0, "SMPL", "Sample an element on the screen.", 0, 0, 0, "DEFAULT_UI_SAMPLE", SampleTool::GetIcon),
+	Tool(0, Name, Description, 0, 0, 0, "DEFAULT_UI_SAMPLE", SampleTool::GetIcon),
 	gameModel(model)
 	{
 	}
@@ -83,8 +85,9 @@ class PropertyTool: public Tool
 {
 public:
 	GameModel * gameModel;
-	PropertyTool(GameModel *model):
-	Tool(0, "PROP", "Property Drawing Tool. Use to alter the properties of elements in the field.", 0xfe, 0xa9, 0x00, "DEFAULT_UI_PROPERTY", NULL),
+	PropertyTool(GameModel *model,String Name,String Description):
+	//Tool(0, "PROP", "Property Drawing Tool. Use to alter the properties of elements in the field.", 0xfe, 0xa9, 0x00, "DEFAULT_UI_PROPERTY", NULL),
+	Tool(0, Name, Description, 0xfe, 0xa9, 0x00, "DEFAULT_UI_PROPERTY", NULL),
 	gameModel(model)
 	{
 	}
@@ -108,8 +111,9 @@ class GOLTool: public Tool
 {
 public:
 	GameModel * gameModel;
-	GOLTool(GameModel * gameModel):
-	Tool(0, "CUST", "Add a new custom GOL type. (Use ctrl+shift+rightclick to remove them)", 0xfe, 0xa9, 0x00, "DEFAULT_UI_ADDLIFE", NULL),
+	GOLTool(GameModel * gameModel,String Name,String Description):
+	//Tool(0, "CUST", "Add a new custom GOL type. (Use ctrl+shift+rightclick to remove them)", 0xfe, 0xa9, 0x00, "DEFAULT_UI_ADDLIFE", NULL),
+	Tool(0, Name, Description, 0xfe, 0xa9, 0x00, "DEFAULT_UI_ADDLIFE", NULL),
 	gameModel(gameModel)
 	{
 	}

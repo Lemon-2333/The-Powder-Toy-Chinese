@@ -8,9 +8,10 @@ static int perform(Simulation * sim, Particle * cpart, int x, int y, int brushX,
 void SimTool::Tool_MIX()
 {
 	Identifier = "DEFAULT_TOOL_MIX";
-	Name = "MIX";
+	Name = ByteString("混合").FromUtf8();
+	EName = "MIX";
 	Colour = PIXPACK(0xFFD090);
-	Description = "Mixes particles.";
+	Description = ByteString("混合粒子").FromUtf8();
 	Perform = &perform;
 }
 

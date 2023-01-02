@@ -30,7 +30,7 @@ void Element::Element_NTCT()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = ByteString("负温度系数热敏电阻. 半导体, 只有超过100℃时才导电.").FromUtf8();
+	Description = ByteString("负温度系数热敏电阻. 半导体, 只有超过100度时才导电.").FromUtf8();
 
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 

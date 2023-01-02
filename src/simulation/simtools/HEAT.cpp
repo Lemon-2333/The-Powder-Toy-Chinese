@@ -5,9 +5,10 @@ static int perform(Simulation * sim, Particle * cpart, int x, int y, int brushX,
 void SimTool::Tool_HEAT()
 {
 	Identifier = "DEFAULT_TOOL_HEAT";
-	Name = "HEAT";
+	Name = ByteString("制热").FromUtf8();
+	EName = "HEAT";
 	Colour = PIXPACK(0xFFDD00);
-	Description = "Heats the targeted element.";
+	Description = ByteString("增加目标元素温度.").FromUtf8();
 	Perform = &perform;
 }
 

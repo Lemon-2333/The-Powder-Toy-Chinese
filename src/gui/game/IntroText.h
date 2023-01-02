@@ -4,7 +4,7 @@
 const char *const introTextData =
 	"\bl\bU" APPNAME "\bU - Version " MTOS(SAVE_VERSION) "." MTOS(MINOR_VERSION) " - https://powdertoy.co.uk, irc.libera.chat #powder, https://tpt.io/discord\n"
 	"\n"
-	"\bgQQ群汉化,版本-\bU 0.2-bate  qq群号:99309202"
+	"\bgQQ群汉化,版本-\bU 0.3-bate  qq群号:99309202"
 	"\n"
 	"\bgControl+C/V/X分别是复制,粘贴,剪切.\n"
 	"\bg要选择一种材料,请将鼠标悬停在右侧的其中一个图标上,它将显示该组中的一系列元素.\n"

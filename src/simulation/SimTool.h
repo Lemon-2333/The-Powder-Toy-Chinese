@@ -11,6 +11,7 @@ class SimTool
 public:
 	ByteString Identifier;
 	String Name;
+	String EName;
 	pixel Colour;
 	String Description;
 

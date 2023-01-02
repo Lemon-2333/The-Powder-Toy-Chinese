@@ -399,31 +399,58 @@ void GameModel::BuildMenus()
 	// Build menu for tools
 	for (size_t i = 0; i < sim->tools.size(); i++)
 	{
-		Tool *tempTool = new Tool(
-			i,
-			sim->tools[i].Name,
-			sim->tools[i].Description,
-			PIXR(sim->tools[i].Colour),
-			PIXG(sim->tools[i].Colour),
-			PIXB(sim->tools[i].Colour),
-			sim->tools[i].Identifier);
-		menuList[SC_TOOL]->AddTool(tempTool);
+		if (sim->chMode == 0)
+		{
+			Tool *tempTool = new Tool(
+				i,
+				sim->tools[i].Name,
+				sim->tools[i].Description,
+				PIXR(sim->tools[i].Colour),
+				PIXG(sim->tools[i].Colour),
+				PIXB(sim->tools[i].Colour),
+				sim->tools[i].Identifier);
+			menuList[SC_TOOL]->AddTool(tempTool);
+		}
+		else
+		{
+			Tool *tempTool = new Tool(
+				i,
+				sim->tools[i].EName,
+				sim->tools[i].Description,
+				PIXR(sim->tools[i].Colour),
+				PIXG(sim->tools[i].Colour),
+				PIXB(sim->tools[i].Colour),
+				sim->tools[i].Identifier);
+			menuList[SC_TOOL]->AddTool(tempTool);
+		}
+		
 	}
 	// Add special sign and prop tools
-	menuList[SC_TOOL]->AddTool(new WindTool(0, "WIND", "Creates air movement.", 64, 64, 64, "DEFAULT_UI_WIND"));
-	menuList[SC_TOOL]->AddTool(new PropertyTool(this));
-	menuList[SC_TOOL]->AddTool(new SignTool(this));
-	menuList[SC_TOOL]->AddTool(new SampleTool(this));
-	menuList[SC_LIFE]->AddTool(new GOLTool(this));
-
+	if(sim->chMode==0)
+	{
+		menuList[SC_TOOL]->AddTool(new WindTool(0, ByteString("风").FromUtf8(), ByteString("创造空气流动.").FromUtf8(), 64, 64, 64, "DEFAULT_UI_WIND"));
+		menuList[SC_TOOL]->AddTool(new PropertyTool(this,ByteString("属修").FromUtf8(),ByteString("属性修改工具.用于更改字段中元素的属性.").FromUtf8()));
+		menuList[SC_TOOL]->AddTool(new SignTool(this,ByteString("标记").FromUtf8(),ByteString("标记.显示文字.点击已存在的标记,可以编辑它.点击其它地方,可以放置一个新的").FromUtf8()));
+		menuList[SC_TOOL]->AddTool(new SampleTool(this,ByteString("采样").FromUtf8(),ByteString("在屏幕上采样一个元素").FromUtf8()));
+		menuList[SC_LIFE]->AddTool(new GOLTool(this,ByteString("CUST").FromUtf8(),ByteString("可自定义 GOL 类型.使用 Ctrl+Shift+Rightclick 删除它们.").FromUtf8()));
+	}
+	else
+	{
+		menuList[SC_TOOL]->AddTool(new WindTool(0, "WIND", ByteString("创造空气流动.").FromUtf8(), 64, 64, 64, "DEFAULT_UI_WIND"));
+		menuList[SC_TOOL]->AddTool(new PropertyTool(this,"PROP",ByteString("属性修改工具.用于更改字段中元素的属性.").FromUtf8()));
+		menuList[SC_TOOL]->AddTool(new SignTool(this,ByteString("SIGN").FromUtf8(),ByteString("标记.显示文字.点击已存在的标记,可以编辑它.点击其它地方,可以放置一个新的").FromUtf8()));
+		menuList[SC_TOOL]->AddTool(new SampleTool(this,ByteString("SAMP").FromUtf8(),ByteString("在屏幕上采样一个元素").FromUtf8()));
+		menuList[SC_LIFE]->AddTool(new GOLTool(this,ByteString("CUST").FromUtf8(),ByteString("可自定义 GOL 类型.使用 Ctrl+Shift+Rightclick 删除它们.").FromUtf8()));
+	}
 	// Add decoration tools to menu
-	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_ADD, "ADD", "Colour blending: Add.", 0, 0, 0, "DEFAULT_DECOR_ADD"));
-	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_SUBTRACT, "SUB", "Colour blending: Subtract.", 0, 0, 0, "DEFAULT_DECOR_SUB"));
-	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_MULTIPLY, "MUL", "Colour blending: Multiply.", 0, 0, 0, "DEFAULT_DECOR_MUL"));
-	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_DIVIDE, "DIV", "Colour blending: Divide.", 0, 0, 0, "DEFAULT_DECOR_DIV"));
-	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_SMUDGE, "SMDG", "Smudge tool, blends surrounding deco together.", 0, 0, 0, "DEFAULT_DECOR_SMDG"));
-	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_CLEAR, "CLR", "Erase any set decoration.", 0, 0, 0, "DEFAULT_DECOR_CLR"));
-	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_DRAW, "SET", "Draw decoration (No blending).", 0, 0, 0, "DEFAULT_DECOR_SET"));
+	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_ADD, "ADD", ByteString("颜色混合:添加.").FromUtf8(), 0, 0, 0, "DEFAULT_DECOR_ADD"));
+	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_SUBTRACT, "SUB", ByteString("颜色混合:减法.").FromUtf8(), 0, 0, 0, "DEFAULT_DECOR_SUB"));
+	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_MULTIPLY, "MUL", ByteString("颜色混合:乘法.").FromUtf8(), 0, 0, 0, "DEFAULT_DECOR_MUL"));
+	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_DIVIDE, "DIV", ByteString("颜色混合:分开.").FromUtf8(), 0, 0, 0, "DEFAULT_DECOR_DIV"));
+	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_SMUDGE, "SMDG", ByteString("涂抹工具,将周围的装饰融合在一起.").FromUtf8(), 0, 0, 0, "DEFAULT_DECOR_SMDG"));
+	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_CLEAR, "CLR", ByteString("擦除任何设置的装饰.").FromUtf8(), 0, 0, 0, "DEFAULT_DECOR_CLR"));
+	menuList[SC_DECO]->AddTool(new DecorationTool(ren, DECO_DRAW, "SET", ByteString("绘制装饰(无混合).").FromUtf8(), 0, 0, 0, "DEFAULT_DECOR_SET"));
+	
 	SetColourSelectorColour(colour); // update tool colors
 	decoToolset[0] = GetToolFromIdentifier("DEFAULT_DECOR_SET");
 	decoToolset[1] = GetToolFromIdentifier("DEFAULT_DECOR_CLR");

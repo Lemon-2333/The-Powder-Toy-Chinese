@@ -8,9 +8,10 @@ static int perform(Simulation * sim, Particle * cpart, int x, int y, int brushX,
 void SimTool::Tool_CYCL()
 {
 	Identifier = "DEFAULT_TOOL_CYCL";
-	Name = "CYCL";
+	Name = ByteString("气旋").FromUtf8();
+	EName = "CYCL";
 	Colour = PIXPACK(0x132f5b);
-	Description = "Cyclone, produces swirling air currents";
+	Description = ByteString("旋风,产生漩涡气流.").FromUtf8();
 	Perform = &perform;
 }
 

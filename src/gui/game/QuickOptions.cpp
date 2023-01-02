@@ -6,7 +6,7 @@
 #include "simulation/Simulation.h"
 
 SandEffectOption::SandEffectOption(GameModel * m):
-QuickOption("P", "Sand effect", m, Toggle)
+QuickOption("P", ByteString("颗粒效果").FromUtf8(), m, Toggle)
 {
 
 }
@@ -22,7 +22,7 @@ void SandEffectOption::perform()
 
 
 DrawGravOption::DrawGravOption(GameModel * m):
-QuickOption("G", "Draw gravity field \bg(ctrl+g)", m, Toggle)
+QuickOption("G", ByteString("引力网格\bg(ctrl+g)").FromUtf8(), m, Toggle)
 {
 
 }
@@ -38,7 +38,7 @@ void DrawGravOption::perform()
 
 
 DecorationsOption::DecorationsOption(GameModel * m):
-QuickOption("D", "Draw decorations \bg(ctrl+b)", m, Toggle)
+QuickOption("D", ByteString("绘制装饰 \bg(ctrl+b)").FromUtf8(), m, Toggle)
 {
 
 }
@@ -54,7 +54,7 @@ void DecorationsOption::perform()
 
 
 NGravityOption::NGravityOption(GameModel * m):
-QuickOption("N", "Newtonian Gravity \bg(n)", m, Toggle)
+QuickOption("N", ByteString("引力模拟 \bg(n)").FromUtf8(), m, Toggle)
 {
 
 }
@@ -70,7 +70,7 @@ void NGravityOption::perform()
 
 
 AHeatOption::AHeatOption(GameModel * m):
-QuickOption("A", "Ambient heat \bg(u)", m, Toggle)
+QuickOption("A", ByteString("环境热 \bg(u)").FromUtf8(), m, Toggle)
 {
 
 }
@@ -86,7 +86,7 @@ void AHeatOption::perform()
 
 
 ConsoleShowOption::ConsoleShowOption(GameModel * m, GameController * c_):
-QuickOption("C", "Show Console \bg(~)", m, Toggle)
+QuickOption("C", ByteString("显示控制台 \bg(~)").FromUtf8(), m, Toggle)
 {
 	c = c_;
 }

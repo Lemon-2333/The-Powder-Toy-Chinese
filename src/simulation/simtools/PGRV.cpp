@@ -5,9 +5,10 @@ static int perform(Simulation * sim, Particle * cpart, int x, int y, int brushX,
 void SimTool::Tool_PGRV()
 {
 	Identifier = "DEFAULT_TOOL_PGRV";
-	Name = "PGRV";
+	Name = ByteString("正引").FromUtf8();
+	EName = "PGRV";
 	Colour = PIXPACK(0xCCCCFF);
-	Description = "Creates a short-lasting gravity well.";
+	Description = ByteString("产生一个持续时间很短的引力").FromUtf8();
 	Perform = &perform;
 }
 

@@ -465,9 +465,9 @@ void SearchView::NotifySaveListChanged(SearchModel * sender)
 	//string messageOfTheDay = sender->GetMessageOfTheDay();
 
 	if(sender->GetShowFavourite())
-		favouriteSelected->SetText("Unfavourite");
+		favouriteSelected->SetText(ByteString("不喜欢").FromUtf8());
 	else
-		favouriteSelected->SetText("Favourite");
+		favouriteSelected->SetText(ByteString("收藏").FromUtf8());
 
 	for (size_t i = 0; i < saveButtons.size(); i++)
 	{
@@ -502,12 +502,12 @@ void SearchView::NotifySaveListChanged(SearchModel * sender)
 		loadingSpinner->Visible = false;
 		if (!errorLabel)
 		{
-			errorLabel = new ui::Label(ui::Point((WINDOWW/2)-100, (WINDOWH/2)-6), ui::Point(200, 12), "Error");
+			errorLabel = new ui::Label(ui::Point((WINDOWW/2)-100, (WINDOWH/2)-6), ui::Point(200, 12), ByteString("错误").FromUtf8());
 			AddComponent(errorLabel);
 		}
 		if (!sender->GetSavesLoaded())
 		{
-			errorLabel->SetText("Loading...");
+			errorLabel->SetText(ByteString("加载中...").FromUtf8());
 			loadingSpinner->Visible = true;
 		}
 		else
@@ -515,7 +515,7 @@ void SearchView::NotifySaveListChanged(SearchModel * sender)
 			if(sender->GetLastError().length())
 				errorLabel->SetText("\bo" + sender->GetLastError());
 			else
-				errorLabel->SetText("\boNo saves found");
+				errorLabel->SetText(ByteString("\bo没有找到存档").FromUtf8());
 		}
 	}
 	else

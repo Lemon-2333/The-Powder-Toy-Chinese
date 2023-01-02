@@ -6,9 +6,10 @@ static int perform(Simulation * sim, Particle * cpart, int x, int y, int brushX,
 void SimTool::Tool_VAC()
 {
 	Identifier = "DEFAULT_TOOL_VAC";
-	Name = "VAC";
+	Name = ByteString("真空").FromUtf8();
+	EName = "VAC";
 	Colour = PIXPACK(0x303030);
-	Description = "Vacuum, reduces air pressure.";
+	Description = ByteString("真空,降低气压.").FromUtf8();
 	Perform = &perform;
 }
 

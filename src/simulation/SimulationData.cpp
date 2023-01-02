@@ -49,6 +49,26 @@ const BuiltinGOL builtinGol[NGOL] = {
 std::vector<wall_type> LoadWalls()
 {
 	return std::vector<wall_type>{
+		{PIXPACK(0x808080), PIXPACK(0x000000), 0, Renderer::WallIcon, String("ERASE"), "DEFAULT_WL_ERASE", 			String(ByteString("清除所有墙类.").FromUtf8())},
+		{PIXPACK(0xC0C0C0), PIXPACK(0x101010), 0, Renderer::WallIcon, String("CONDUCTIVE WALL"), "DEFAULT_WL_CNDTW",String(ByteString("阻挡一切,可以当作导体.").FromUtf8())},
+		{PIXPACK(0x808080), PIXPACK(0x808080), 0, Renderer::WallIcon, String("EWALL"), "DEFAULT_WL_EWALL", 			String(ByteString("电控墙,通电时允许通过.").FromUtf8())},
+		{PIXPACK(0xFF8080), PIXPACK(0xFF2008), 1, Renderer::WallIcon, String("DETECTOR"), "DEFAULT_WL_DTECT", 		String(ByteString("检测器.内部存在物质时,发出电脉冲.").FromUtf8())},
+		{PIXPACK(0x808080), PIXPACK(0x000000), 0, Renderer::WallIcon, String("STREAMLINE"), "DEFAULT_WL_STRM", 		String(ByteString("风向计.设置一个风向计的起始点.").FromUtf8())},
+		{PIXPACK(0x8080FF), PIXPACK(0x000000), 1, Renderer::WallIcon, String("FAN"), "DEFAULT_WL_FAN", 				String(ByteString("风扇产生气压使用直线工具设置方向和强度.").FromUtf8())},
+		{PIXPACK(0xC0C0C0), PIXPACK(0x101010), 2, Renderer::WallIcon, String("LIQUID WALL"), "DEFAULT_WL_LIQD", 	String(ByteString("阻挡大多数物体,除了液体.可以导电.").FromUtf8())},
+		{PIXPACK(0x808080), PIXPACK(0x000000), 1, Renderer::WallIcon, String("ABSORB WALL"), "DEFAULT_WL_ABSRB", 	String(ByteString("吸收物质,允许气压通过.").FromUtf8())},
+		{PIXPACK(0x808080), PIXPACK(0x000000), 3, Renderer::WallIcon, String("WALL"), "DEFAULT_WL_WALL", 			String(ByteString("基础墙,阻挡一切.").FromUtf8())},
+		{PIXPACK(0x3C3C3C), PIXPACK(0x000000), 1, Renderer::WallIcon, String("AIRONLY WALL"), "DEFAULT_WL_AIR", 	String(ByteString("允许压力通过,阻挡一切物质.").FromUtf8())},
+		{PIXPACK(0x575757), PIXPACK(0x000000), 1, Renderer::WallIcon, String("POWDER WALL"), "DEFAULT_WL_POWDR", 	String(ByteString("允许粉末通过,阻挡其他所有物质.").FromUtf8())},
+		{PIXPACK(0xFFFF22), PIXPACK(0x101010), 2, Renderer::WallIcon, String("CONDUCTOR"), "DEFAULT_WL_CNDTR", 		String(ByteString("允许所有物质通过.可以导电.").FromUtf8())},
+		{PIXPACK(0x242424), PIXPACK(0x101010), 0, Renderer::WallIcon, String("EHOLE"), "DEFAULT_WL_EHOLE", 			String(ByteString("电锁体吸收物质,通电时释放.").FromUtf8())},
+		{PIXPACK(0x579777), PIXPACK(0x000000), 1, Renderer::WallIcon, String("GAS WALL"), "DEFAULT_WL_GAS", 		String(ByteString("允许气体通过.").FromUtf8())},
+		{PIXPACK(0xFFEE00), PIXPACK(0xAA9900), 4, Renderer::WallIcon, String("GRAVITY WALL"), "DEFAULT_WL_GRVTY", 	String(ByteString("引力墙范围内的万有引力(注:默认的普通引力除外,可以按 W 切换)将失效.").FromUtf8())},
+		{PIXPACK(0xFFAA00), PIXPACK(0xAA5500), 4, Renderer::WallIcon, String("ENERGY WALL"), "DEFAULT_WL_ENRGY", 	String(ByteString("允许能量粒子通过,阻挡其他物质.").FromUtf8())},
+		{PIXPACK(0xDCDCDC), PIXPACK(0x000000), 1, Renderer::WallIcon, String("AIRBLOCK WALL"), "DEFAULT_WL_NOAIR", 	String(ByteString("允许所有物质通过,隔绝压力.").FromUtf8())},
+		{PIXPACK(0x808080), PIXPACK(0x000000), 0, Renderer::WallIcon, String("ERASEALL"), "DEFAULT_WL_ERASEA", 		String(ByteString("清除墙,物质,标识.").FromUtf8())},
+		{PIXPACK(0x800080), PIXPACK(0x000000), 0, Renderer::WallIcon, String("STASIS WALL"), "DEFAULT_WL_STASIS", 	String(ByteString("静止其内所有物质,除非通电.").FromUtf8())},
+		/*
 		{PIXPACK(0x808080), PIXPACK(0x000000), 0, Renderer::WallIcon, String("ERASE"), "DEFAULT_WL_ERASE", String("Erases walls.")},
 		{PIXPACK(0xC0C0C0), PIXPACK(0x101010), 0, Renderer::WallIcon, String("CONDUCTIVE WALL"), "DEFAULT_WL_CNDTW", String("Blocks everything. Conductive.")},
 		{PIXPACK(0x808080), PIXPACK(0x808080), 0, Renderer::WallIcon, String("EWALL"), "DEFAULT_WL_EWALL", String("E-Wall. Becomes transparent when electricity is connected.")},
@@ -68,30 +88,31 @@ std::vector<wall_type> LoadWalls()
 		{PIXPACK(0xDCDCDC), PIXPACK(0x000000), 1, Renderer::WallIcon, String("AIRBLOCK WALL"), "DEFAULT_WL_NOAIR", String("Allows all particles, but blocks air.")},
 		{PIXPACK(0x808080), PIXPACK(0x000000), 0, Renderer::WallIcon, String("ERASEALL"), "DEFAULT_WL_ERASEA", String("Erases walls, particles, and signs.")},
 		{PIXPACK(0x800080), PIXPACK(0x000000), 0, Renderer::WallIcon, String("STASIS WALL"), "DEFAULT_WL_STASIS", String("Freezes particles inside the wall in place until powered.")},
+		*/
 	};
 }
 
 std::vector<menu_section> LoadMenus()
 {
 	return std::vector<menu_section>{
-		{0xE041, ByteString("墙壁").FromUtf8(), 0, 1},	   // Walls
-		{0xE042, ByteString("电路元件").FromUtf8(), 0, 1}, // Electronics
-		{0xE056, ByteString("可控材料").FromUtf8(), 0, 1},	   // Powered Materials
-		{0xE019, ByteString("传感器").FromUtf8(), 0, 1},	   // Sensors
-		{0xE062, ByteString("动力材料").FromUtf8(), 0, 1},	   // Force
-		{0xE043, ByteString("爆炸物").FromUtf8(), 0, 1},	   // Explosives
-		{0xE045, ByteString("气体").FromUtf8(), 0, 1},	   // Gases
-		{0xE044, ByteString("液体").FromUtf8(), 0, 1},	   // Liquids
-		{0xE050, ByteString("粉末").FromUtf8(), 0, 1},	   // Powders
-		{0xE051, ByteString("固体").FromUtf8(), 0, 1},	   // Solids
-		{0xE046, ByteString("放射性元素").FromUtf8(), 0, 1},	   // Radioactive
-		{0xE04C, ByteString("特殊元素").FromUtf8(), 0, 1},	   // Special
-		{0xE052, ByteString("生命游戏").FromUtf8(), 0, 1},	   // Game Of Life
-		{0xE057, ByteString("工具").FromUtf8(), 0, 1},	   // Tools
-		{0xE067, ByteString("收藏").FromUtf8(), 0, 1},	   // Favorites
-		{0xE064, ByteString("装饰工具").FromUtf8(), 0, 1},	   // Decoration tools
-		{0xE048, ByteString("Cracker").FromUtf8(), 0, 0},	   // Cracker
-		{0xE048, ByteString("Cracker!").FromUtf8(), 0, 0},	   // Cracker!
+		{0xE041, ByteString("墙壁").FromUtf8(), 0, 1},		 // Walls
+		{0xE042, ByteString("电路元件").FromUtf8(), 0, 1},	 // Electronics
+		{0xE056, ByteString("可控材料").FromUtf8(), 0, 1},	 // Powered Materials
+		{0xE019, ByteString("传感器").FromUtf8(), 0, 1},	 // Sensors
+		{0xE062, ByteString("动力材料").FromUtf8(), 0, 1},	 // Force
+		{0xE043, ByteString("爆炸物").FromUtf8(), 0, 1},	 // Explosives
+		{0xE045, ByteString("气体").FromUtf8(), 0, 1},		 // Gases
+		{0xE044, ByteString("液体").FromUtf8(), 0, 1},		 // Liquids
+		{0xE050, ByteString("粉末").FromUtf8(), 0, 1},		 // Powders
+		{0xE051, ByteString("固体").FromUtf8(), 0, 1},		 // Solids
+		{0xE046, ByteString("放射性元素").FromUtf8(), 0, 1}, // Radioactive
+		{0xE04C, ByteString("特殊元素").FromUtf8(), 0, 1},	 // Special
+		{0xE052, ByteString("生命游戏").FromUtf8(), 0, 1},	 // Game Of Life
+		{0xE057, ByteString("工具").FromUtf8(), 0, 1},		 // Tools
+		{0xE067, ByteString("收藏").FromUtf8(), 0, 1},		 // Favorites
+		{0xE064, ByteString("装饰工具").FromUtf8(), 0, 1},	 // Decoration tools
+		{0xE048, ByteString("Cracker").FromUtf8(), 0, 0},	 // Cracker
+		{0xE048, ByteString("Cracker!").FromUtf8(), 0, 0},	 // Cracker!
 	};
 }
 

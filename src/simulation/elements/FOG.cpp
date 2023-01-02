@@ -6,7 +6,7 @@ void Element::Element_FOG()
 {
 	Identifier = "DEFAULT_PT_FOG";
 	Name = ByteString("雾").FromUtf8();
-	Name = "FOG";
+	EName = "FOG";
 	Colour = PIXPACK(0xAAAAAA);
 	MenuVisible = 1;
 	MenuSection = SC_GAS;

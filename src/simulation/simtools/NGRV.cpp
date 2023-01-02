@@ -5,9 +5,10 @@ static int perform(Simulation * sim, Particle * cpart, int x, int y, int brushX,
 void SimTool::Tool_NGRV()
 {
 	Identifier = "DEFAULT_TOOL_NGRV";
-	Name = "NGRV";
+	Name = ByteString("负引").FromUtf8();
+	EName = "NGRV";
 	Colour = PIXPACK(0xAACCFF);
-	Description = "Creates a short-lasting negative gravity well.";
+	Description = ByteString("产生一个持续时间很短的负引力井").FromUtf8();
 	Perform = &perform;
 }
 

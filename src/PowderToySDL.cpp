@@ -891,7 +891,7 @@ int main(int argc, char * argv[])
 		if(arguments["open"].length())
 		{
 #ifdef DEBUG
-			std::cout << "Loading " << arguments["open"] << std::endl;
+			std::cout << ByteString("加载中").FromUtf8() << arguments["open"] << std::endl;
 #endif
 			if (Platform::FileExists(arguments["open"]))
 			{
@@ -900,7 +900,7 @@ int main(int argc, char * argv[])
 					std::vector<char> gameSaveData;
 					if (!Platform::ReadFile(gameSaveData, arguments["open"]))
 					{
-						new ErrorMessage("Error", "Could not read file");
+						new ErrorMessage(ByteString("错误").FromUtf8(), ByteString("无法加载服务器内容").FromUtf8());
 					}
 					else
 					{
@@ -914,12 +914,12 @@ int main(int argc, char * argv[])
 				}
 				catch (std::exception & e)
 				{
-					new ErrorMessage("Error", "Could not open save file:\n" + ByteString(e.what()).FromUtf8()) ;
+					new ErrorMessage(ByteString("错误").FromUtf8(), ByteString("无法打开保存文件:\n").FromUtf8() + ByteString(e.what()).FromUtf8()) ;
 				}
 			}
 			else
 			{
-				new ErrorMessage("Error", "Could not open file");
+				new ErrorMessage(ByteString("错误").FromUtf8(), ByteString("无法打开文件").FromUtf8());
 			}
 		}
 
@@ -927,7 +927,7 @@ int main(int argc, char * argv[])
 		{
 			engine->g->fillrect((engine->GetWidth()/2)-101, (engine->GetHeight()/2)-26, 202, 52, 0, 0, 0, 210);
 			engine->g->drawrect((engine->GetWidth()/2)-100, (engine->GetHeight()/2)-25, 200, 50, 255, 255, 255, 180);
-			engine->g->drawtext((engine->GetWidth()/2)-(Graphics::textwidth("Loading save...")/2), (engine->GetHeight()/2)-5, "Loading save...", style::Colour::InformationTitle.Red, style::Colour::InformationTitle.Green, style::Colour::InformationTitle.Blue, 255);
+			engine->g->drawtext((engine->GetWidth()/2)-(Graphics::textwidth(ByteString("加载存档...").FromUtf8())/2), (engine->GetHeight()/2)-5, ByteString("加载存档...").FromUtf8(), style::Colour::InformationTitle.Red, style::Colour::InformationTitle.Green, style::Colour::InformationTitle.Blue, 255);
 
 			blit(engine->g->vid);
 			ByteString ptsaveArg = arguments["ptsave"];
@@ -955,7 +955,7 @@ int main(int argc, char * argv[])
 					throw std::runtime_error("Could not load save info");
 				auto saveData = Client::Ref().GetSaveData(saveId, 0);
 				if (!saveData.size())
-					throw std::runtime_error(("Could not load save\n" + Client::Ref().GetLastError()).ToUtf8());
+					throw std::runtime_error((ByteString("无法加载存档\n").FromUtf8() + Client::Ref().GetLastError()).ToUtf8());
 				GameSave * newGameSave = new GameSave(std::move(saveData));
 				newSave->SetGameSave(newGameSave);
 
@@ -964,7 +964,7 @@ int main(int argc, char * argv[])
 			}
 			catch (std::exception & e)
 			{
-				new ErrorMessage("Error", ByteString(e.what()).FromUtf8());
+				new ErrorMessage(ByteString("错误").FromUtf8(), ByteString(e.what()).FromUtf8());
 			}
 		}
 
