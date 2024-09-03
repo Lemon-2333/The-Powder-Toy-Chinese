@@ -131,7 +131,7 @@ jobs:
     if: needs.prepare.outputs.do_publish == 'yes'
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ matrix.asset_name }}
       - run: mv ${{ matrix.asset_path }} ${{ matrix.starcatcher_name }}
